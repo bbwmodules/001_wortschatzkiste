@@ -1,0 +1,56 @@
+{
+  "topic": "Cloud Computing Modelle",
+  "description": "Begriffe zu Cloud Computing Modellen",
+  "cards": [
+    {
+      "b": "Cloud Computing",
+      "q": "Was ist Cloud Computing?",
+      "a": "Cloud Computing ist die Bereitstellung von Computing-Ressourcen (Server, Speicher, Datenbanken, Netzwerke, Software, Analyse, KI usw.) über das Internet, um Innovation, flexible Ressourcen und Skaleneffekte zu ermöglichen."
+    },
+    {
+      "b":"Cloud Computing",
+      "q": "Was bedeutet Hyperscaler?",
+      "a": "Ein Hyperscaler ist ein Betreiber eines Rechenzentrums, das skalierbare Cloud-Computing-Dienste anbietet."
+    },
+    {
+      "b":"IaaS",
+      "q": "Was ist Infrastructure as a Service (IaaS)?",
+      "a": "IaaS bedeutet, dass man IT-Infrastruktur wie Server, virtuelle Maschinen, Speicher, Netzwerke und Betriebssysteme eines Cloudanbieters in Anspruch nimmt."
+    },
+    {
+      "b": "PaaS",
+      "q": "Was ist Platform as a Service (PaaS)?",
+      "a": "PaaS bietet eine bedarfsgesteuerte Umgebung für Entwicklung, Tests, Bereitstellung und Verwaltung von Softwareanwendungen."
+    },
+    {
+      "b": "SaaS",
+      "q": "Was ist Software as a Service (SaaS)?",
+      "a": "SaaS ist eine Methode zur Bereitstellung von Softwareanwendungen über das Internet."
+    },
+    {
+      "b": "FaaS",
+      "q": "Was ist Function as a Service (FaaS)?",
+      "a": "FaaS ist eine Methode zur Bereitstellung von App-Funktionen über das Internet."
+    },
+    {
+      "b": "On-Premise",
+      "q": "Was bedeutet On-Premise?",
+      "a": "Beim On-Premise-Betrieb wird Software vollständig in eigener Verantwortung auf eigener Hardware oder in eigenen/mieteten Rechenzentren betrieben – ohne Cloud."
+    },
+    {
+      "b": "Public Cloud",
+      "q": "Was ist eine Public Cloud?",
+      "a": "Die Public Cloud befindet sich im Besitz externer Anbieter (z. B. Microsoft Azure). Ressourcen wie Server und Speicher werden über das Internet bereitgestellt."
+    },
+    {
+      "b": "Private Cloud",
+      "q": "Was ist eine Private Cloud?",
+      "a": "Eine Private Cloud wird exklusiv von einem einzigen Unternehmen genutzt. Sie kann physisch im Unternehmens-Datencenter betrieben werden."
+    },
+    {
+      "b": "Hybrid Cloud",
+      "q": "Was ist eine Hybrid Cloud?",
+      "a": "Eine Hybrid Cloud kombiniert Private- und Public-Cloud-Elemente. Dienste und Infrastruktur werden teilweise in einem privaten Netzwerk, teilweise in einer Public Cloud betrieben."
+    }
+  ]
+}

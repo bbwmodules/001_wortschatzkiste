@@ -1,0 +1,164 @@
+{
+  "topic": "11.4_HTML-CSS-Gestaltung-Mit-CSS",
+  "description": "CSS, Einbindung, Eigenschaften, Einheiten, Selektoren",
+  "cards": [
+    {
+      "b": "HTML",
+      "q": "Grundprinzip HTML",
+      "a": "HTML beschreibt die Struktur (Inhalt)."
+    },
+    {
+      "b": "CSS",
+      "q": "Grundprinzip CSS",
+      "a": "CSS beschreibt das Aussehen (Design)."
+    },
+    {
+      "b": "Style",
+      "q": "Was ist eine Style-Regel?",
+      "a": "Eine Style Anweisung in der Form „eigenschaft: wert;“ – z. B. color: red;."
+    },
+    {
+      "b": "inline",
+      "q": "Inline-Style",
+      "a": "CSS direkt inline am Element, z. B. <p style=\"color:red;\">…</p>. Schnell, aber unübersichtlich."
+    },
+    {
+      "b": "<style>",
+      "q": "Wofür steht das <style>-Tag?",
+      "a": "CSS Definition innerhalb eines <style> Tag direkt im HTML-Dokument (gut für kleine Seiten/Tests)."
+    },
+    {
+      "b": "eigenen Datei",
+      "q": "Externe CSS-Datei",
+      "a": "CSS in einer eigenen Datei, per <link rel=\"stylesheet\" href=\"styles.css\"> eingebunden. Standard für grössere Websites."
+    },
+    {
+      "b": "color",
+      "q": "Eigenschaft: color",
+      "a": "color: Legt die Textfarbe fest, z. B. red, blue oder #00FF00."
+    },
+    {
+      "b": "font-size",
+      "q": "Eigenschaft: font-size",
+      "a": "Bestimmt die Schriftgrösse, z. B. 16px, 2em, 120%."
+    },
+    {
+      "b": "background-color",
+      "q": "Eigenschaft: background-color",
+      "a": "Hintergrundfarbe eines Elements, z. B. lightyellow oder #f0f0f0."
+    },
+    {
+      "b": "list-style-type",
+      "q": "Eigenschaft: list-style-type",
+      "a": "Symbolart bei Listen, z. B. disc, square, none."
+    },
+    {
+      "b": "margin-left",
+      "q": "Eigenschaft: margin-left",
+      "a": "Linker Aussenabstand (Einrückung), z. B. 20px."
+    },
+    {
+      "b": "border",
+      "q": "Eigenschaft: border",
+      "a": "Rahmen: Dicke, Art, Farbe – z. B. 2px solid blue."
+    },
+    {
+      "b": "width",
+      "q": "Eigenschaft: width",
+      "a": "Breite eines Elements (z. B. Bild, div), z. B. 150px oder 50%."
+    },
+
+    {
+      "b": "px",
+      "q": "Einheit: px",
+      "a": "Einheit Pixel: Bildschirmpixel als absolute Einheit."
+    },
+    {
+      "b": "in %",
+      "q": "Einheit: %",
+      "a": "Einheit in % relativ zum Elternelement, Bsp. width:50% nimmt die halbe Breite des Containers ein."
+    },
+    {
+      "b": "rem",
+      "q": "Einheit: rem",
+      "a": "Relativ zur Root-Schriftgrösse (html). Bei 16px Root sind 2rem -> 32px."
+    },
+    {
+      "b": "em",
+      "q": "Einheit: em",
+      "a": "Relativ zur Schriftgrösse des Eltern-Elements. Bei 16px Eltern sind 2em -> 32px."
+    },
+    {
+      "b": "RGB",
+      "q": "Farbformat: #RRGGBB",
+      "a": "Hex-Farben: RR=Rot, GG=Grün, BB=Blau (00–FF). Bsp.: #800080 (dunkles Violett)."
+    },
+    {
+      "b": "rot",
+      "q": "Farbname: rot",
+      "a": "Beispiel für Farbnamen: color: red; setzt die Textfarbe auf Rot."
+    },
+    {
+      "b": "inherit",
+      "q": "Wert: inherit",
+      "a": "inherit: Erbt den Wert vom Elternelement. Z. B. ul ul { font-size: inherit; } stoppt weiteres Hochskalieren in verschachtelten Listen."
+    },
+    {
+      "b": "justify",
+      "q": "Textausrichtung: justify",
+      "a": "text-align: justify -> Text erscheint im Blocksatz, jede Zeile links und rechts bündig endet.."
+    },
+    {
+      "b": "sans-serif",
+      "q": "Schriftfamilie: sans-serif",
+      "a": "Serifenlose Schriftfamilie, z. B. p { font-family: sans-serif; }."
+    },
+    {
+      "b": "CSS Selektoren",
+      "q": "CSS Selektoren (Überblick)",
+      "a": "Bestimmen, welche Elemente gestylt werden: Element-, Klassen-, ID-, verschachtelte und Attribut-Selektoren."
+    },
+    {
+      "b": "Element-Selektor",
+      "q": "Element-Selektor",
+      "a": "Spricht alle Elemente eines Typs an: p { color: blue; }."
+    },
+    {
+      "b": "Klassen-Selektor",
+      "q": "Klassen-Selektor",
+      "a": "Spricht Elemente mit class an: .info { color: green; }, <p class=\"info\">…</p>."
+    },
+    {
+      "b": "ID-Selektor",
+      "q": "ID-Selektor",
+      "a": "Spricht ein Element mit id an: #haupttitel { font-size: 30px; }."
+    },
+    {
+      "b": "Verschachtelte Selektoren",
+      "q": "Verschachtelte Selektoren",
+      "a": "Beschränken auf bestimmte Struktur, z. B. nav ul li { list-style-type: none; }."
+    },
+    {
+      "b": "Attribut-Selektor",
+      "q": "Attribut-Selektor",
+      "a": "Zielt auf Attribute: input[type=\"text\"] { border: 1px solid gray; }."
+    },
+    {
+      "b": "Kaskade",
+      "q": "Cascading (Kaskade)",
+      "a": "Regeln überlagern sich; spezifischere gewinnt (z. B. #id vor .klasse vor element). Ergebnis richtet sich nach Spezifität/Reihenfolge."
+    },
+
+    {
+      "b": "Unterliste",
+      "q": "Unter-Liste (verschachtelte Liste)",
+      "a": "Eine ul innerhalb einer li erstellt eine Unterliste. Beispiel im Dokument mit Möbel-Unterpunkten."
+    },
+    {
+      "b": "table",
+      "q": "Unterschied „table ul“ vs. „table, ul“",
+      "a": "„table ul“ stylt ul, die NACHFAHREN von table sind (Descendant-Selektor). „table, ul“ stylt table UND ul unabhängig (Gruppierung)."
+    }
+  ]
+}
+

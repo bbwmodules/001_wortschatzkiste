@@ -1,0 +1,31 @@
+{
+  "topic": "Networking Basics",
+  "description": "Grundbegriffe IP, DNS, DHCP — kurzer Überblick",
+  "cards": [
+    {
+      "b": "IP-Adresse",
+      "q": "Was ist eine IP-Adresse?",
+      "a": "Eine numerische Adresse, die ein Gerät im Netzwerk identifiziert (IPv4/IPv6)."
+    },
+    {
+      "b": "DNS",
+      "q": "DNS – wofür?",
+      "a": "Domain Name System löst Namen (z. B. example.com) in IP-Adressen auf."
+    },
+    {
+      "b": "DHCP",
+      "q": "DHCP – kurz erklärt",
+      "a": "Dynamic Host Configuration Protocol vergibt automatisch IP-Konfigurationen an Clients."
+    },
+    {
+      "b": "Subnetzmaske",
+      "q": "Subnetzmaske?",
+      "a": "Sie teilt das Netzwerk in Netz- und Hostanteil (z. B. 255.255.255.0)."
+    },
+    {
+      "b": "Gateway",
+      "q": "Default Gateway",
+      "a": "Router-Adresse, an die Pakete für andere Netze geschickt werden."
+    }
+  ]
+}

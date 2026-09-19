@@ -1,0 +1,61 @@
+{
+  "topic": "Cloud Computing weitere Begriffe",
+  "description": "Vertiefende Konzepte zu Cloud, Skalierung und Automatisierung",
+  "cards": [
+    {
+      "b": "Virtualisierung",
+      "q": "Was bedeutet Virtualisierung?",
+      "a": "Virtualisierung nutzt Software, um Hardwarefunktionen zu simulieren und virtuelle Computersysteme zu erstellen. Dadurch können mehrere Systeme, Betriebssysteme und Anwendungen auf einem einzigen Server ausgeführt werden."
+    },
+    {
+      "b": "Orchestrierung",
+      "q": "Was ist Orchestrierung?",
+      "a": "Orchestrierung ist die automatisierte Konfiguration, Verwaltung und Koordinierung von Computersystemen, Anwendungen und Services. Damit lassen sich komplexe Workflows effizienter bewältigen."
+    },
+    {
+      "b": "IaC",
+      "q": "Was bedeutet Infrastructure as Code (IaC)?",
+      "a": "IaC ist die Verwaltung und Bereitstellung von Infrastruktur über maschinenlesbare Definitionsdateien – anstatt über manuelle Konfiguration von Hardware oder Tools."
+    },
+    {
+      "b": "Pay-as-you-go",
+      "q": "Was bedeutet Pay-as-you-go?",
+      "a": "Pay-as-you-go ist ein Abrechnungsmodell, bei dem Kosten nach tatsächlicher Nutzung anfallen oder ein Service im Voraus bezahlt wird."
+    },
+    {
+      "b": "Redundanz",
+      "q": "Was bedeutet Redundanz im Cloud-Kontext?",
+      "a": "Redundanz ist die geplante Mehrfachauslegung technischer Komponenten, um Verfügbarkeit und Sicherheit zu erhöhen."
+    },
+    {
+      "b": "Resilienz",
+      "q": "Was bedeutet Resilienz im Cloud-Kontext?",
+      "a": "Resilienz ist die Widerstandsfähigkeit gegenüber Störungen wie Hardwarefehlern, Cyberangriffen oder Netzausfällen. Sie umfasst alle Cloud-Komponenten und -Systeme."
+    },
+    {
+      "b": "Containerisierung",
+      "q": "Was ist Containerisierung?",
+      "a": "Containerisierung fasst Softwarecode mit allen Abhängigkeiten in einem Container zusammen, der konsistent in jeder Infrastruktur ausgeführt werden kann."
+    },
+    {
+      "b": "Skalierung",
+      "q": "Was bedeutet horizontale Skalierung?",
+      "a": "Horizontale Skalierung (Scale out) erhöht die Kapazität, indem mehrere Komponenten verbunden werden, sodass sie wie eine logische Einheit arbeiten."
+    },
+    { 
+      "b": "Skalierung",
+      "q": "Was bedeutet vertikale Skalierung?",
+      "a": "Vertikale Skalierung (Scale up) erhöht die Kapazität durch Hinzufügen zusätzlicher Ressourcen, z. B. mehr CPU oder RAM für einen Server."
+    },
+    { 
+      "b": "Instanz",
+      "q": "Was ist ein Knoten oder eine Instanz?",
+      "a": "Eine Instanz ist eine Ressource, z. B. ein Server mit RAM und Prozessoren. Mehrere Instanzen können für Skalierung genutzt werden."
+    },
+    {
+      "b": "Autoscaling",
+      "q": "Was bedeutet Autoscaling?",
+      "a": "Autoscaling ist die automatische Anpassung der Cloud-Ressourcen für eine Anwendung, ohne menschliches Eingreifen, um Leistung und Verfügbarkeit sicherzustellen."
+    }
+  ]
+}

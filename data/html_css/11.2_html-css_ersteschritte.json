@@ -1,0 +1,66 @@
+{
+  "topic": "11.2_HTML-CSS-Erste-Schritte",
+  "description": "HTML und erste Tags",
+  "cards": [
+        {
+          "b": "HTML",
+          "q": "Was bedeutet HTML?",
+          "a": "HTML steht für HyperText Markup Language. Es ist die Standard-Auszeichnungssprache, mit der der Inhalt von Webseiten strukturiert wird. Browser interpretieren den Code und zeigen die Seite an."
+        },
+        {
+          "b": "Markup",
+          "q": "Was ist Markup?",
+          "a": "Markup bedeutet Auszeichnung. HTML ist eine Markup-Sprache, bei der Inhalte mit Tags ausgezeichnet werden, damit der Browser weiss, wie sie dargestellt werden sollen."
+        },
+        {
+          "b": "Tags",
+          "q": "Was sind Tags in HTML?",
+          "a": "Tags sind Auszeichnungselemente in spitzen Klammern wie <p> oder <h1>. Sie geben dem Browser Anweisungen, wie Inhalte strukturiert oder dargestellt werden."
+        },
+        {
+          "b": "Anfangs-Tag",
+          "q": "Was ist ein Anfangs-Tag?",
+          "a": "Ein Anfangs-Tag öffnet ein Element, z. B. <p>. Danach folgt der Inhalt, der durch das Tag ausgezeichnet wird."
+        },
+        {
+          "b": "Ende-Tag",
+          "q": "Was ist ein Ende-Tag?",
+          "a": "Ein Ende-Tag schliesst ein Element, z. B. </p>. Zusammen mit dem Anfangs-Tag bildet es ein Element."
+        },
+        {
+          "b": "HTML",
+          "q": "Was ist der Unterschied zwischen normalem Text und HTML im Browser?",
+          "a": "Normaler Text wird vom Browser einfach als Text dargestellt. HTML-Code wird interpretiert und kann Struktur (Überschriften, Absätze, Listen) oder Formatierung vorgeben."
+        },
+        {
+          "b": "richtig einrücken",
+          "q": "Warum sollte man HTML-Code richtig einrücken?",
+          "a": "Das Einrücken macht den Code besser lesbar und verständlicher. Für den Browser spielt es keine Rolle, aber für Entwickler erhöht es die Übersichtlichkeit."
+        },
+        {
+          "b": "<h1>",
+          "q": "Was bewirkt das <h1>-Tag?",
+          "a": "<h1> definiert die wichtigste Überschrift einer Seite. Es wird meist gross und fett dargestellt."
+        },
+        {
+          "b": "<p>",
+          "q": "Was bewirkt das <p>-Tag?",
+          "a": "<p> steht für Paragraph und kennzeichnet einen Textabsatz in HTML."
+        },
+        {
+          "b": "<ol>",
+          "q": "Was bewirkt das <ol>-Tag?",
+          "a": "<ol> steht für 'ordered list' und kennzeichnet eine nummerierte Liste."
+        },
+        {
+          "b": "<ul>",
+          "q": "Was bewirkt das <ul>-Tag?",
+          "a": "<ul> steht für 'unordered list' und kennzeichnet eine Aufzählungsliste mit Punkten."
+        },
+        {
+          "b": "<li>",
+          "q": "Was bewirkt das <li>-Tag?",
+          "a": "<li> steht für 'list item' und kennzeichnet ein einzelnes Listenelement innerhalb von <ol> oder <ul>."
+        }
+  ]
+}

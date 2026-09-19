@@ -1,0 +1,132 @@
+{
+  "topic": "_HTML-CSS Layout mit CSS",
+  "description": "Box-Modell, Display, Position und Layout-Elemente",
+  "cards": [
+    {
+      "b": "Box-Modell",
+      "q": "Was ist das CSS-Box Modell?",
+      "a": "Das Box-Modell behandelt jedes HTML-Element als Box mit vier Bereichen: content (Inhalt), padding (Innenabstand), border (Rahmen) und margin (Aussenabstand)."
+    },
+    {
+      "b": "margin",
+      "q": "Was bedeutet margin?",
+      "a": "margin ist der Aussenabstand einer Box zum nächsten Element."
+    },
+    {
+      "b": "border",
+      "q": "Was bedeutet border?",
+      "a": "border ist der Rahmen um eine Box, z. B. 5px solid blue."
+    },
+    {
+      "b": "padding",
+      "q": "Was bedeutet padding?",
+      "a": "padding ist der Innenabstand zwischen Inhalt und Rahmen einer Box."
+    },
+    {
+      "b": "content",
+      "q": "Was bedeutet content?",
+      "a": "content ist der eigentliche Inhalt einer Box, z. B. Text oder Bild."
+    },
+    {
+      "b": "Display-Typen",
+      "q": "Welche Display-Typen gibt es in CSS?",
+      "a": "block (nimmt ganze Breite ein, neue Zeile), inline (fliesst im Text mit), inline-block (inline, aber mit Breite/Höhe), flex (flexible Layouts), grid (Raster-System)."
+    },
+    {
+      "b": "Position",
+      "q": "Welche Positionierungsarten gibt es in CSS?",
+      "a": "static (Standardfluss), relative (verschoben zur Standardposition), absolute (relativ zu nächstem positionierten Elternelement), fixed (bleibt fix beim Scrollen), sticky (Mischung aus relative und fixed)."
+    },
+
+    {
+      "b": "block",
+      "q": "Was bedeutet block?",
+      "a": "Ein block-Element nimmt die volle Breite ein und beginnt in einer neuen Zeile (z. B. <div>, <p>)."
+    },
+    {
+      "b": "inline",
+      "q": "Was bedeutet inline?",
+      "a": "Ein inline-Element fliesst im Text mit (z. B. <span>, <a>)."
+    },
+    {
+      "b": "inline-block",
+      "q": "Was bedeutet inline-block?",
+      "a": "inline-block-Elemente verhalten sich wie inline, haben aber einstellbare Breite und Höhe."
+    },
+    {
+      "b": "flex",
+      "q": "Was bedeutet flex?",
+      "a": "Flexbox ist ein Layout-Modus, der Kinder nebeneinander in flexiblen Reihen/Spalten anordnet."
+    },
+    {
+      "b": "grid",
+      "q": "Was bedeutet grid?",
+      "a": "Grid ist ein leistungsstarkes Raster-System für komplexe Layouts mit Zeilen und Spalten."
+    },
+    {
+      "b": "static",
+      "q": "Was bedeutet static?",
+      "a": "static ist die Standard-Positionierung: Elemente erscheinen im normalen Dokumentenfluss."
+    },
+    {
+      "b": "relative",
+      "q": "Was bedeutet relative?",
+      "a": "relative verschiebt ein Element relativ zu seiner normalen Position."
+    },
+    {
+      "b": "absolute",
+      "q": "Was bedeutet absolute?",
+      "a": "absolute positioniert ein Element relativ zum nächsten positionierten Elternelement."
+    },
+    {
+      "b": "fixed",
+      "q": "Was bedeutet fixed?",
+      "a": "fixed fixiert ein Element relativ zum Browserfenster (z. B. eine Menüleiste beim Scrollen)."
+    },
+    {
+      "b": "sticky",
+      "q": "Was bedeutet sticky?",
+      "a": "sticky kombiniert relative und fixed: bleibt an seiner Position, bis ein Scrollpunkt erreicht ist."
+    },
+    {
+      "b": "header",
+      "q": "Wofür dient <header>?",
+      "a": "<header> kennzeichnet den Kopfbereich einer Seite (Logo, Titel, Navigation)."
+    },
+    {
+      "b": "footer",
+      "q": "Wofür dient <footer>?",
+      "a": "<footer> kennzeichnet den Fussbereich einer Seite (Kontakt, Impressum, Copyright)."
+    },
+    {
+      "b": "<aside>",
+      "q": "Wofür dient <aside>?",
+      "a": "<aside> enthält Inhalte, die im indirekten Zusammenhang mit dem Hauptinhalt stehen (z. B. Werbekasten, Zusatzinfos)."
+    },
+    {
+      "b":"<section>",
+      "q": "Wofür dient <section>?",
+      "a": "<section> gliedert eine Seite in thematische Abschnitte."
+    },
+    {
+      "b": "<table>",
+      "q": "Wofür dient <table>?",
+      "a": "<table> erstellt eine Tabelle."
+    },
+    {
+      "b": "<tr>",
+      "q": "Wofür dient <tr>?",
+      "a": "<tr> steht für table row – eine Tabellenzeile."
+    },
+    {
+      "b": "<th>",
+      "q": "Wofür dient <th>?",
+      "a": "<th> ist ein Tabellenkopf (Spaltentitel)."
+    },
+    {
+      "b": "<td>",
+      "q": "Wofür dient <td>?",
+      "a": "<td> ist eine Tabellenzelle mit normalen Daten."
+    }
+  ]
+}

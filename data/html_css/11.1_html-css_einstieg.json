@@ -1,0 +1,71 @@
+{
+  "topic": "11.1_HTML-CSS-Einstieg",
+  "description": "Begriffe zu Web, Browser und HTML",
+  "cards": [
+    {
+      "b": "Browser",
+      "q": "Was ist ein Browser?",
+      "a": "Ein Browser ist ein Programm, mit dem Sie Webseiten aus dem Internet anzeigen und nutzen können. Er sendet Anfragen an einen Webserver, empfängt Daten (HTML, CSS, JavaScript, Bilder …) und stellt sie grafisch dar."
+    },
+    {
+      "b": "Domain",
+      "q": "Was ist eine Domain?",
+      "a": "Eine Domain ist der eindeutige Name einer Website im Internet. Sie übersetzt eine IP-Adresse (zBsp 142.250.186.206) in einen lesbaren Namen (zBsp www.bbw.ch). Eine Domain besteht aus TLD (.com, .ch), Second-Level (zBsp bbw) und optionalen Subdomains (zBsp www, mail)."
+    },
+    {
+      "b": "Homepage",
+      "q": "Was ist eine Homepage?",
+      "a": "Die Homepage ist die Startseite einer Website, also die erste Seite, die beim Aufruf angezeigt wird (oft index.html)."
+    },
+    {
+      "b": "HTML",
+      "q": "Was bedeutet HTML?",
+      "a": "HTML bedeutet HyperText Markup Language. Es ist die Standard-Auszeichnungssprache, mit der der Inhalt von Webseiten strukturiert wird. Browser interpretieren den Code und stellen die Seite dar."
+    },
+    {
+      "b": "IDE",
+      "q": "Was ist eine IDE?",
+      "a": "Eine Integrated Development Environment (IDE) ist eine integrierte Entwicklungsumgebung wie zB IntelliJ. Sie erleichtert das Programmieren durch Editoren, Debugger und integrierte Server."
+    },
+    {
+      "b": "Datei index.html",
+      "q": "Wozu dient die Datei index.html?",
+      "a": "Die Datei index.html ist oft die Startseite einer Website. Webserver liefern sie automatisch aus, wenn man nur die Domain-URL eingibt (zB http://www.bbw.ch/)."
+    },
+    {
+      "b": "IP-Adresse",
+      "q": "Was ist eine IP-Adresse?",
+      "a": "Eine IP-Adresse ist die eindeutige Nummer, mit der Geräte im Netzwerk identifiziert werden. IPv4: 192.168.0.1, IPv6: 2001:0db8:85a3::8a2e:0370:7334."
+    },
+    {
+      "b": "Packages",
+      "q": "Was sind Packages (in React)?",
+      "a": "Packages sind wiederverwendbare Bibliotheken oder Module, die zusätzliche Funktionen bereitstellen. Sie werden meist über npm oder yarn installiert und ins Projekt eingebunden."
+    },
+    {
+      "b": "Request",
+      "q": "Was ist ein Request?",
+      "a": "Ein Request ist eine Anfrage eines Clients (zB Browsers) an den Server, um eine Ressource zu laden."
+    },
+    {
+      "b": "Request",
+      "q": "Was ist eine Response?",
+      "a": "Eine Response ist die Antwort des Servers auf einen Request. Sie enthält Statusinformationen (Erfolg, Fehler) und Daten (zB HTML-Seite, JSON, Bild)."
+    },
+    {
+      "b": "URL",
+      "q": "Was ist eine URL?",
+      "a": "Eine URL (Uniform Resource Locator) ist die Adresse einer Ressource im Internet. Sie gibt an, wo etwas liegt und wie es abgerufen wird (zB https://www.beispiel.ch:443/pfad/datei.html?suche=test#anker)."
+    },
+    {
+      "b": "Website",
+      "q": "Was ist eine Website?",
+      "a": "Eine Website ist die gesamte Internetpräsenz einer Domain, bestehend aus vielen einzelnen Seiten (Webpages)."
+    },
+    {
+      "b": "Webpage",
+      "q": "Was ist eine Webpage?",
+      "a": "Eine Webpage ist eine einzelne Seite innerhalb einer Website."
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "topic": "Java Basics",
+  "description": "Syntax & OOP‑Grundlagen",
+  "cards": [
+    {
+      "b": "public",
+      "q": "Was macht 'public static void main'?",
+      "a": "Einstiegspunkt in eine Java‑Applikation."
+    },
+    {
+      "b": "static",
+      "q": "Was macht 'static'?",
+      "a": "Statische Methoden und Variablen gehören der Klasse an, nicht dem Objekt."
+    },
+    {
+      "b": "Klasse",
+      "q": "Klasse vs. Objekt?",
+      "a": "Klasse = Bauplan, Objekt = Instanz."
+    },
+    {
+      "b": "Vererbung",
+      "q": "Was ist Vererbung?",
+      "a": "Eine Klasse erbt Eigenschaften/Methoden einer anderen Klasse (extends)."
+    },
+    {
+      "b": "Interface",
+      "q": "Interface?",
+      "a": "Ein Vertrag für Methoden-Signaturen ohne Implementierung."
+    },
+    {
+      "b": "Package",
+      "q": "Package?",
+      "a": "Namensraum/Ordnerstruktur für Klassen."
+    }
+  ]
+}

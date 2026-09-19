@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wort-Schatz-Kiste</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #68738a;
+      --paper: #fffdf8;
+      --accent: #e56b4e;
+      --accent-dark: #bd4930;
+      --line: #e8dfd2;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 40px 20px;
+      color: var(--ink);
+      background: linear-gradient(135deg, #f7efe3 0%, #e5f0ee 100%);
+      font-family: Georgia, serif;
+    }
+
+    main { width: min(100%, 920px); margin: 0 auto; }
+    .site-title { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 0 0 24px; }
+    .site-title img { width: 76px; height: auto; flex: 0 0 auto; }
+    h1 { margin: 0; font-size: clamp(2rem, 6vw, 3.5rem); }
+    h2 { margin: 0; font-size: clamp(1.4rem, 3vw, 2rem); }
+
+    .controls, .navigation {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .section-divider {
+      height: 1px;
+      margin: 30px 0 26px;
+      border: 0;
+      background: var(--line);
+    }
+
+    select, button {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 11px 15px;
+      color: var(--ink);
+      background: var(--paper);
+      font: inherit;
+      cursor: pointer;
+    }
+
+    button { border-color: var(--accent); background: var(--accent); color: white; }
+    button:hover { background: var(--accent-dark); }
+    button:focus-visible, select:focus-visible { outline: 3px solid #f5b09d; outline-offset: 2px; }
+
+    .view { animation: fade-in 400ms ease both; }
+    .is-hidden { display: none; }
+
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card-stage {
+      perspective: 1200px;
+      margin: 34px 0 20px;
+    }
+
+    .card {
+      position: relative;
+      min-height: 300px;
+      cursor: pointer;
+      transform-style: preserve-3d;
+    }
+
+    .card-inner {
+      position: relative;
+      min-height: 300px;
+      transform-style: preserve-3d;
+      transition: transform 650ms cubic-bezier(.2, .75, .25, 1);
+    }
+
+    .card.is-flipped .card-inner { transform: rotateY(180deg); }
+
+    .front, .back {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 42px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--paper);
+      box-shadow: 0 18px 45px rgba(47, 55, 67, .13);
+      backface-visibility: hidden;
+      text-align: center;
+      font-size: clamp(1.35rem, 3vw, 2rem);
+      line-height: 1.35;
+    }
+
+    .back { transform: rotateY(180deg); background: #fff7ef; }
+
+    .card.is-next { animation: slide-from-right 450ms cubic-bezier(.2, .75, .25, 1); }
+    .card.is-prev { animation: slide-from-left 450ms cubic-bezier(.2, .75, .25, 1); }
+
+    @keyframes slide-from-right {
+      from { opacity: 0; transform: translateX(110px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slide-from-left {
+      from { opacity: 0; transform: translateX(-110px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .exercise-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: end;
+      margin-top: 0;
+      margin-bottom: 22px;
+    }
+
+    .exercise-intro { max-width: 560px; color: var(--muted); line-height: 1.5; }
+
+    .exercise-board {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(210px, .75fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .explanation-list, .term-bank {
+      display: grid;
+      gap: 12px;
+    }
+
+    .explanation-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(145px, .7fr);
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .explanation, .drop-zone, .term {
+      min-height: 78px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--paper);
+    }
+
+    .explanation { display: flex; align-items: center; line-height: 1.4; }
+    .drop-zone {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-style: dashed;
+      color: var(--muted);
+      text-align: center;
+      transition: background 220ms ease, border-color 220ms ease, transform 220ms ease;
+    }
+
+    .drop-zone.is-over { border-color: var(--accent); background: #fff0e8; transform: scale(1.03); }
+    .drop-zone.is-correct { border-color: #5f9c72; background: #edf8ef; }
+    .drop-zone.is-wrong { border-color: #c65353; background: #fff0f0; animation: shake 350ms ease; }
+
+    .term-bank { padding: 16px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255, 253, 248, .65); }
+    .term-bank h3 { margin: 0 0 4px; }
+    .term-bank p { margin: 0 0 8px; color: var(--muted); font-size: .92rem; line-height: 1.4; }
+    .term { display: flex; align-items: center; justify-content: center; min-height: 58px; background: #fef1dc; cursor: grab; text-align: center; line-height: 1.3; transition: transform 220ms ease, box-shadow 220ms ease, opacity 220ms ease; }
+    .term:hover { transform: translateY(-3px) rotate(-1deg); box-shadow: 0 8px 16px rgba(47, 55, 67, .12); }
+    .term:active { cursor: grabbing; }
+    .term.is-placed { opacity: .45; transform: scale(.96); }
+    .drop-zone .term { width: 100%; min-height: 44px; padding: 8px; cursor: grab; }
+
+    .exercise-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
+    .exercise-actions .secondary { border-color: var(--line); background: transparent; color: var(--ink); }
+    .exercise-message { min-height: 28px; margin: 18px 0 0; font-size: 1.1rem; font-weight: bold; }
+
+    .choice-question {
+      max-width: 760px;
+      margin: 34px auto 24px;
+      padding: 34px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--paper);
+      box-shadow: 0 18px 45px rgba(47, 55, 67, .13);
+      text-align: center;
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      line-height: 1.45;
+    }
+
+    .choice-options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .choice-option {
+      min-height: 86px;
+      border-color: var(--line);
+      background: var(--paper);
+      color: var(--ink);
+      transition: transform 220ms ease, background 220ms ease, border-color 220ms ease;
+    }
+
+    .choice-option:hover { background: #fff0e8; transform: translateY(-3px); }
+    .choice-option.is-correct { border-color: #5f9c72; background: #edf8ef; color: #275c37; }
+    .choice-option.is-wrong { border-color: #c65353; background: #fff0f0; color: #8b2929; animation: shake 350ms ease; }
+    .choice-navigation { justify-content: center; margin-top: 22px; }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      35% { transform: translateX(-6px); }
+      70% { transform: translateX(6px); }
+    }
+
+    @media (max-width: 680px) {
+      body { padding: 24px 14px; }
+      .site-title { gap: 10px; }
+      .site-title img { width: 58px; }
+      .exercise-header { display: block; }
+      .exercise-intro { margin-top: 8px; }
+      .exercise-board { grid-template-columns: 1fr; }
+      .term-bank { order: -1; }
+      .explanation-row { grid-template-columns: 1fr; }
+      .drop-zone { min-height: 62px; }
+      .choice-options { grid-template-columns: 1fr; }
+      .choice-question { padding: 26px 20px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .card-inner, .drop-zone, .term { transition: none; }
+      .card.is-next, .card.is-prev, .view { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="site-title">
+      <h1>Wort-Schatz-Kiste</h1>
+      <img
+          src="treasure-chest.svg"
+          alt="Offene Schatzkiste mit Goldmünzen"
+          style="width: 200px; max-width: 100%; height: auto;"
+      />
+    </div>
+    <div class="controls">
+      <select id="areaSelect" aria-label="Themenbereich auswählen"></select>
+      <select id="topicSelect" aria-label="Thema auswählen"></select>
+      <button id="load" type="button">Laden</button>
+    </div>
+    <hr class="section-divider" aria-hidden="true" />
+
+    <section id="flashcardView" class="view" aria-label="Flashcards">
+      <div class="exercise-header">
+        <h2>Flashcards</h2>
+        <div class="controls">
+          <button id="exerciseMode" type="button">zu Begriffe zuordnen</button>
+          <button id="choiceMode" type="button">zu 1 aus 4</button>
+        </div>
+      </div>
+      <div class="card-stage">
+        <div id="card" class="card" role="button" tabindex="0" aria-label="Karte drehen">
+          <div class="card-inner">
+            <div id="front" class="front">Frage</div>
+            <div id="back" class="back">Antwort</div>
+          </div>
+        </div>
+      </div>
+      <div class="navigation">
+        <button id="prev" type="button">Zurück</button>
+        <button id="flip" type="button">Drehen</button>
+        <button id="next" type="button">Weiter</button>
+      </div>
+    </section>
+
+    <section id="exerciseView" class="view is-hidden" aria-label="Begriffe zuordnen">
+      <div class="exercise-header">
+        <div>
+          <h2>Begriffe zuordnen</h2>
+          <div class="exercise-intro">Ziehe jeden Begriff aus der rechten Spalte zur passenden Erklärung. Die Reihenfolge wird jedes Mal neu gemischt.</div>
+        </div>
+        <div class="controls">
+          <button id="choiceFromMatching" type="button" class="secondary">zu 1 aus 4</button>
+          <button id="backToCards" type="button" class="secondary">Zu den Flashcards</button>
+        </div>
+      </div>
+      <div id="exerciseBoard" class="exercise-board"></div>
+      <div class="exercise-actions">
+        <button id="checkExercise" type="button">Antworten prüfen</button>
+        <button id="showSolutions" type="button" class="secondary">Lösungen anzeigen</button>
+        <button id="newExercise" type="button" class="secondary">Neu mischen</button>
+      </div>
+      <p id="exerciseMessage" class="exercise-message" aria-live="polite"></p>
+    </section>
+
+    <section id="choiceView" class="view is-hidden" aria-label="1 aus 4">
+      <div class="exercise-header">
+        <h2>1 aus 4</h2>
+        <div class="controls">
+          <button id="choiceBackToCards" type="button" class="secondary">Zu den Flashcards</button>
+          <button id="choiceToMatching" type="button" class="secondary">zu Begriffe zuordnen</button>
+        </div>
+      </div>
+      <div id="choiceQuestion" class="choice-question"></div>
+      <div id="choiceOptions" class="choice-options"></div>
+      <div class="exercise-actions choice-navigation">
+        <button id="choicePrev" type="button" class="secondary">Zurück</button>
+        <button id="choiceSolution" type="button" class="secondary">Lösung anzeigen</button>
+        <button id="choiceNext" type="button">Weiter</button>
+      </div>
+      <p id="choiceMessage" class="exercise-message" aria-live="polite"></p>
+    </section>
+    <footer style="text-align: center; margin-top: 40px;">
+  ©    P.Rutschmann 2026 
+    </footer>
+  </main>
+  <script>
+    const dataPath = "data/";
+    const areaSelect = document.getElementById("areaSelect");
+    const topicSelect = document.getElementById("topicSelect");
+    const cardEl = document.getElementById("card");
+    const frontEl = document.getElementById("front");
+    const backEl = document.getElementById("back");
+    const flashcardView = document.getElementById("flashcardView");
+    const exerciseView = document.getElementById("exerciseView");
+    const choiceView = document.getElementById("choiceView");
+    const exerciseBoard = document.getElementById("exerciseBoard");
+    const exerciseMessage = document.getElementById("exerciseMessage");
+    const choiceQuestion = document.getElementById("choiceQuestion");
+    const choiceOptions = document.getElementById("choiceOptions");
+    const choiceMessage = document.getElementById("choiceMessage");
+    let deck = { cards: [] };
+    let idx = 0;
+    let exerciseCards = [];
+    let choiceIndex = 0;
+    let choiceAnswered = false;
+    let areaFromUrl = new URLSearchParams(window.location.search).get("topic");
+
+    async function readDirectory(path) {
+      const response = await fetch(path, { cache: "no-store" });
+      if (!response.ok) throw new Error(`Verzeichnis nicht gefunden: ${path}`);
+      const html = await response.text();
+      const documentFragment = new DOMParser().parseFromString(html, "text/html");
+      const baseUrl = new URL(path, window.location.href);
+      const basePath = baseUrl.pathname.endsWith("/") ? baseUrl.pathname : `${baseUrl.pathname}/`;
+      return [...documentFragment.querySelectorAll("a")]
+        .map(link => link.getAttribute("href"))
+        .filter(Boolean)
+        .map(href => {
+          const targetUrl = new URL(href, baseUrl);
+          if (targetUrl.pathname === basePath.slice(0, -1)) return "../";
+          if (!targetUrl.pathname.startsWith(basePath)) return null;
+          const entry = targetUrl.pathname.slice(basePath.length);
+          return entry && !entry.includes(".") && !entry.endsWith("/") ? `${entry}/` : entry;
+        })
+        .filter(Boolean);
+    }
+
+    async function discoverAreas() {
+      const entries = await readDirectory(dataPath);
+      return entries
+        .filter(entry => entry.endsWith("/") && entry !== "../")
+        .map(entry => decodeURIComponent(entry.slice(0, -1)));
+    }
+
+    async function discoverFiles(area) {
+      const entries = await readDirectory(`${dataPath}${encodeURIComponent(area)}/`);
+      return entries
+        .filter(entry => entry.toLowerCase().endsWith(".json"))
+        .map(entry => decodeURIComponent(entry));
+    }
+
+    function flipCard() {
+      cardEl.classList.toggle("is-flipped");
+    }
+
+    function renderAreas(areas) {
+      areaSelect.replaceChildren();
+      areas.forEach(area => {
+        const option = document.createElement("option");
+        option.value = area;
+        option.textContent = area;
+        areaSelect.appendChild(option);
+      });
+      areaSelect.hidden = Boolean(areaFromUrl);
+    }
+
+    async function renderTopics(area, selectedFile) {
+      const files = await discoverFiles(area);
+      topicSelect.replaceChildren();
+      for (const file of files) {
+        const response = await fetch(`${dataPath}${encodeURIComponent(area)}/${encodeURIComponent(file)}`, { cache: "no-store" });
+        const data = await response.json();
+        const option = document.createElement("option");
+        option.value = file;
+        option.textContent = data.topic || file;
+        topicSelect.appendChild(option);
+      }
+      topicSelect.value = selectedFile && files.includes(selectedFile) ? selectedFile : files[0] || "";
+      return files;
+    }
+
+    async function loadDeck(area, file) {
+      const res = await fetch(`${dataPath}${encodeURIComponent(area)}/${encodeURIComponent(file)}`, { cache: "no-store" });
+      deck = await res.json();
+      idx = 0;
+      renderCard();
+    }
+
+    function renderCard() {
+      if (!deck.cards.length) return;
+      const c = deck.cards[idx];
+      frontEl.textContent = c.q;
+      backEl.textContent = c.a;
+      cardEl.classList.remove("is-flipped");
+    }
+
+    function shuffle(items) {
+      return [...items].sort(() => Math.random() - 0.5);
+    }
+
+    function maskTermInExplanation(explanation, term) {
+      if (!term) return explanation;
+      const escapedTerm = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const letterCount = [...term].filter(character => /\p{L}/u.test(character)).length;
+      const mask = "*".repeat(letterCount);
+      return explanation.replace(new RegExp(escapedTerm, "giu"), mask);
+    }
+
+    function createExercise() {
+      exerciseCards = shuffle(deck.cards.map((card, cardIndex) => ({ ...card, id: cardIndex })));
+      const explanations = document.createElement("div");
+      explanations.className = "explanation-list";
+      const termBank = document.createElement("div");
+      termBank.className = "term-bank";
+      termBank.innerHTML = "<h3>Begriffe</h3><p>Ziehe sie in die passenden Felder.</p>";
+      const terms = document.createElement("div");
+      terms.className = "term-bank";
+
+      shuffle(exerciseCards).forEach(card => {
+        const term = document.createElement("div");
+        term.className = "term";
+        term.draggable = true;
+        term.dataset.cardId = card.id;
+        term.textContent = card.b;
+        term.addEventListener("dragstart", event => {
+          event.dataTransfer.setData("text/plain", String(card.id));
+          term.classList.add("is-placed");
+        });
+        term.addEventListener("dragend", () => term.classList.remove("is-placed"));
+        terms.appendChild(term);
+      });
+      termBank.appendChild(terms);
+
+      exerciseCards.forEach(card => {
+        const row = document.createElement("div");
+        row.className = "explanation-row";
+        row.innerHTML = `<div class="explanation">${card.a}</div><div class="drop-zone" data-card-id="${card.id}">Begriff hier ablegen</div>`;
+        const dropZone = row.querySelector(".drop-zone");
+        dropZone.addEventListener("dragover", event => {
+          event.preventDefault();
+          dropZone.classList.add("is-over");
+        });
+        dropZone.addEventListener("dragleave", () => dropZone.classList.remove("is-over"));
+        dropZone.addEventListener("drop", event => {
+          event.preventDefault();
+          const termId = event.dataTransfer.getData("text/plain");
+          const term = document.querySelector(`.term[data-card-id="${termId}"]`);
+          dropZone.classList.remove("is-over");
+          if (!term) return;
+          const previousTerm = dropZone.querySelector(".term");
+          if (previousTerm) terms.appendChild(previousTerm);
+          dropZone.textContent = "";
+          dropZone.appendChild(term);
+        });
+        explanations.appendChild(row);
+      });
+
+      exerciseBoard.replaceChildren(explanations, termBank);
+      exerciseMessage.textContent = "";
+    }
+
+    function checkExercise(showSolution = false) {
+      const zones = [...document.querySelectorAll(".drop-zone")];
+      let correct = 0;
+      zones.forEach(zone => {
+        const term = zone.querySelector(".term");
+        zone.classList.remove("is-correct", "is-wrong");
+        if (!term) return;
+        const isCorrect = term.dataset.cardId === zone.dataset.cardId;
+        correct += isCorrect ? 1 : 0;
+        zone.classList.add(isCorrect ? "is-correct" : "is-wrong");
+      });
+      if (showSolution) {
+        zones.forEach(zone => {
+          const solution = document.querySelector(`.term[data-card-id="${zone.dataset.cardId}"]`);
+          if (solution && solution.parentElement !== zone) {
+            const current = zone.querySelector(".term");
+            if (current) document.querySelector(".term-bank > .term-bank").appendChild(current);
+            zone.textContent = "";
+            zone.appendChild(solution);
+          }
+          zone.classList.remove("is-wrong");
+          zone.classList.add("is-correct");
+        });
+        exerciseMessage.textContent = "Hier sind die Lösungen.";
+      } else if (correct === exerciseCards.length) {
+        exerciseMessage.textContent = "Alles richtig. Stark gemacht!";
+      } else {
+        exerciseMessage.textContent = `${correct} von ${exerciseCards.length} richtig. Die markierten Felder passen noch nicht.`;
+      }
+    }
+
+    function showExercise() {
+      if (!deck.cards.length) {
+        exerciseMessage.textContent = "Bitte zuerst ein Thema laden.";
+        return;
+      }
+      flashcardView.classList.add("is-hidden");
+      exerciseView.classList.remove("is-hidden");
+      createExercise();
+    }
+
+    function showFlashcards() {
+      exerciseView.classList.add("is-hidden");
+      choiceView.classList.add("is-hidden");
+      flashcardView.classList.remove("is-hidden");
+    }
+
+    function createChoiceQuestion() {
+      if (!deck.cards.length) return;
+      const question = deck.cards[choiceIndex];
+      const otherCards = shuffle(deck.cards.filter((_, cardIndex) => cardIndex !== choiceIndex)).slice(0, 3);
+      const options = shuffle([question, ...otherCards]);
+      choiceAnswered = false;
+      choiceQuestion.textContent = maskTermInExplanation(question.a, question.b);
+      choiceOptions.replaceChildren();
+      choiceMessage.textContent = "";
+      options.forEach(optionCard => {
+        const option = document.createElement("button");
+        option.type = "button";
+        option.className = "choice-option";
+        option.textContent = optionCard.q;
+        option.dataset.correct = String(optionCard === question);
+        option.onclick = () => answerChoice(option, question);
+        choiceOptions.appendChild(option);
+      });
+    }
+
+    function answerChoice(option, question) {
+      if (choiceAnswered) return;
+      choiceAnswered = true;
+      const correctOption = [...choiceOptions.children].find(item => item.dataset.correct === "true");
+      correctOption.classList.add("is-correct");
+      if (option.dataset.correct === "true") {
+        choiceMessage.textContent = "Richtig. Stark gemacht!";
+      } else {
+        option.classList.add("is-wrong");
+        choiceMessage.textContent = `Nicht ganz. Die richtige Antwort ist: ${question.q}`;
+      }
+    }
+
+    function showChoice() {
+      if (!deck.cards.length) {
+        choiceMessage.textContent = "Bitte zuerst ein Thema laden.";
+        return;
+      }
+      flashcardView.classList.add("is-hidden");
+      exerciseView.classList.add("is-hidden");
+      choiceView.classList.remove("is-hidden");
+      createChoiceQuestion();
+    }
+
+    function changeChoice(direction) {
+      if (!deck.cards.length) return;
+      choiceIndex = (choiceIndex + direction + deck.cards.length) % deck.cards.length;
+      createChoiceQuestion();
+    }
+
+    function showChoiceSolution() {
+      if (!deck.cards.length) return;
+      const correctOption = [...choiceOptions.children].find(option => option.dataset.correct === "true");
+      choiceAnswered = true;
+      correctOption.classList.add("is-correct");
+      choiceMessage.textContent = `Die richtige Antwort ist: ${deck.cards[choiceIndex].q}`;
+    }
+
+    function changeCard(direction) {
+      if (!deck.cards.length) return;
+      idx = (idx + direction + deck.cards.length) % deck.cards.length;
+      cardEl.classList.remove("is-next", "is-prev");
+      void cardEl.offsetWidth;
+      cardEl.classList.add(direction > 0 ? "is-next" : "is-prev");
+      renderCard();
+    }
+
+    async function loadSelection() {
+      const area = areaFromUrl || areaSelect.value;
+      const file = topicSelect.value;
+      if (area && file) await loadDeck(area, file);
+      showFlashcards();
+    }
+
+    areaSelect.onchange = async () => {
+      areaFromUrl = null;
+      areaSelect.hidden = false;
+      await renderTopics(areaSelect.value);
+      await loadSelection();
+    };
+    topicSelect.onchange = loadSelection;
+    document.getElementById("load").onclick = loadSelection;
+    document.getElementById("flip").onclick = flipCard;
+    cardEl.onclick = flipCard;
+    cardEl.onkeydown = event => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        flipCard();
+      }
+    };
+    document.getElementById("next").onclick = () => changeCard(1);
+    document.getElementById("prev").onclick = () => changeCard(-1);
+    document.getElementById("exerciseMode").onclick = showExercise;
+    document.getElementById("choiceMode").onclick = showChoice;
+    document.getElementById("choiceFromMatching").onclick = showChoice;
+    document.getElementById("backToCards").onclick = showFlashcards;
+    document.getElementById("choiceBackToCards").onclick = showFlashcards;
+    document.getElementById("choiceToMatching").onclick = showExercise;
+    document.getElementById("checkExercise").onclick = () => checkExercise();
+    document.getElementById("showSolutions").onclick = () => checkExercise(true);
+    document.getElementById("newExercise").onclick = createExercise;
+    document.getElementById("choicePrev").onclick = () => changeChoice(-1);
+    document.getElementById("choiceNext").onclick = () => changeChoice(1);
+    document.getElementById("choiceSolution").onclick = showChoiceSolution;
+
+    async function initialize() {
+      try {
+        const areas = await discoverAreas();
+        if (!areas.length) throw new Error("Keine Themenbereiche gefunden.");
+        const selectedArea = areaFromUrl && areas.includes(areaFromUrl) ? areaFromUrl : areas[0];
+        areaFromUrl = areaFromUrl && areas.includes(areaFromUrl) ? areaFromUrl : null;
+        renderAreas(areas);
+        areaSelect.value = selectedArea;
+        await renderTopics(selectedArea);
+        await loadSelection();
+      } catch (error) {
+        exerciseMessage.textContent = "Die Themenbereiche konnten nicht geladen werden.";
+        console.error(error);
+      }
+    }
+
+    initialize();
+  </script>
+</body>
+</html>

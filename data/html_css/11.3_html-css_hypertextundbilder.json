@@ -1,0 +1,76 @@
+{
+  "topic": "11.3_HTML-CSS-Hypertext-Und-Bilder",
+  "description": "HTML, Hypertext und Bilder",
+  "cards": [
+    {
+      "b": "Pfad",
+      "q": "Was bedeutet 'Pfad auf Bilder'?",
+      "a": "Der Pfad gibt an, wo die Bilddatei liegt. Beispiel: `./img/desk.svg` bedeutet: im aktuellen Verzeichnis liegt ein Unterordner `img` mit der Datei `desk.svg`."
+    },
+    {
+      "b": "<a>",
+      "q": "Wofür steht das <a>-Tag?",
+      "a": "<a> (Anchor) wird für Links benutzt. Beispiel: <a href=\"https://www.bbw.ch\">BBW</a> erstellt einen klickbaren Verweis."
+    },
+    {
+      "b": "href",
+      "q": "Wofür dient das href-Attribut?",
+      "a": "Das Attribut `href` (Hypertext Reference) gibt die Zieladresse eines Links an (URL oder Pfad)."
+    },
+    {
+      "b": "<nav>",
+      "q": "Wofür dient das <nav>-Tag?",
+      "a": "<nav> kennzeichnet einen Bereich mit Navigationslinks. Es ist ein semantisches HTML5-Element und verbessert Barrierefreiheit sowie SEO."
+    },
+    {
+      "b": "aria-current",
+      "q": "Was bedeutet aria-current?",
+      "a": "Das Attribut `aria-current=\"page\"` markiert den aktuellen Menüpunkt. Screenreader geben an: 'aktuell ausgewählt'."
+    },
+    {
+      "b": "<img>",
+      "q": "Wofür dient das <img>-Tag?",
+      "a": "<img> bindet ein Bild in eine Webseite ein. Beispiel: <img src=\"bild.png\" alt=\"Beschreibung\" width=\"200\" title=\"ein Bild\">."
+    },
+    {
+      "b": "src",
+      "q": "Wofür dient das src-Attribut?",
+      "a": "Das Attribut `src` gibt die Quelle des Bildes an: Dateipfad oder URL."
+    },
+    {
+      "b": "alt",
+      "q": "Wofür dient das alt-Attribut?",
+      "a": "Das Attribut `alt` gibt einen Alternativtext an, falls das Bild nicht geladen werden kann oder für Screenreader."
+    },
+    {
+      "b": "width",
+      "q": "Wofür dient das width-Attribut?",
+      "a": "Mit `width` (und optional `height`) kann die Grösse des Bildes in Pixeln angegeben werden."
+    },
+    {
+      "b": "title",
+      "q": "Wofür dient das title-Attribut bei <img>?",
+      "a": "Das `title`-Attribut zeigt einen zusätzlichen Hinweis (Tooltip), wenn man mit der Maus über das Bild fährt."
+    },
+    {
+      "b": "<figure>",
+      "q": "Wofür dient das <figure>-Tag?",
+      "a": "<figure> ist ein Container für ein Bild oder eine Grafik, oft zusammen mit einer Bildunterschrift."
+    },
+    {
+      "b": "<figcaption>",
+      "q": "Wofür dient das <figcaption>-Tag?",
+      "a": "<figcaption> fügt eine Bildunterschrift zu einem Bild innerhalb von <figure> hinzu. Beispiel: <figcaption>Abbildung 1: Meine Katze</figcaption>."
+    },
+    {
+      "b": "'./'",
+      "q": "Was bedeutet der Pfad './' in HTML?",
+      "a": "Das Präfix './' bedeutet: 'im aktuellen Verzeichnis'. Beispiel: <img src=\"./img/desk.svg\"> sucht im Ordner 'img', der im gleichen Verzeichnis liegt wie die HTML-Seite."
+    },
+    {
+      "b": "'../'",
+      "q": "Was bedeutet der Pfad '../' in HTML?",
+      "a": "Das Präfix '../' bedeutet: 'ein Verzeichnis höher'. Beispiel: <img src=\"../bilder/logo.png\"> sucht im Ordner 'bilder', der eine Ebene über der aktuellen HTML-Seite liegt."
+    }
+  ]
+}

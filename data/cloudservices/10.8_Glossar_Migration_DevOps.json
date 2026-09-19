@@ -1,0 +1,56 @@
+{
+  "topic": "Cloud Migration & DevOps",
+  "description": "Begriffe zu Cloud-Migrationsstrategien und modernen Entwicklungspraktiken",
+  "cards": [
+    {
+      "b": "Cloud Migration",
+      "q": "Was bedeutet Cloud Migration?",
+      "a": "Cloud Migration ist der Prozess, Anwendungen, Daten, Infrastruktur, Sicherheit und andere Objekte in eine Cloud-Umgebung zu verschieben."
+    },
+    {
+      "b": "Lift-and-Shift",
+      "q": "Was ist Lift-and-Shift (Rehosting)?",
+      "a": "Eine Migration, bei der Anwendungen und Daten unverändert in die Cloud verschoben werden – ohne Neudesign der Anwendung."
+    },
+    {
+      "b": "Lift-and-Reshape",
+      "q": "Was ist Lift-and-Reshape (Replatforming)?",
+      "a": "Bei Replatforming wird die Anwendung in die Cloud verschoben und teilweise optimiert, um Kosten zu senken oder Cloud-Funktionen zu nutzen."
+    },
+    {
+      "b": "Refactoring",
+      "q": "Was bedeutet Refactoring im Cloud-Kontext?",
+      "a": "Die Anwendung wird in die Cloud verschoben und die Architektur wird angepasst, um Cloud-native Features für Agilität, Performance und Skalierbarkeit zu nutzen."
+    },
+    {
+      "b": "Repurchasing",
+      "q": "Was bedeutet Repurchasing?",
+      "a": "Eine On-Premise-Anwendung wird durch eine SaaS-Anwendung eines Providers ersetzt. Vorteil: automatische Updates und weniger Betriebsaufwand."
+    },
+    {
+      "b": "Retaining",
+      "q": "Was bedeutet Retaining?",
+      "a": "Die Analyse zeigt, dass eine Migration aktuell nicht sinnvoll ist. Die Anwendung bleibt wie sie ist."
+    },
+    {
+      "b": "Retiring",
+      "q": "Was bedeutet Retiring?",
+      "a": "Die Anwendung wird nicht mehr benötigt und eingestellt (stillgelegt)."
+    },
+    {
+      "b": "TDD",
+      "q": "Was bedeutet TDD?",
+      "a": "Test Driven Development: Zuerst werden Tests geschrieben, dann die Implementierung."
+    },
+    {
+      "b": "CI",
+      "q": "Was bedeutet CI/CD?",
+      "a": "CI = Continuous Integration, CD = Continuous Delivery/Deployment. Moderne Entwicklungspraxis mit häufigen, zuverlässigen Code-Änderungen und automatisierten Deployments."
+    },
+    {
+      "b": "DevOps",
+      "q": "Was bedeutet DevOps?",
+      "a": "DevOps ist eine Sammlung von Praktiken, Tools und einer Kultur, die Entwicklung (Dev) und Betrieb (Ops) integriert und Prozesse automatisiert."
+    }
+  ]
+}

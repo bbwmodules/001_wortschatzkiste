@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" role="img" aria-labelledby="title desc">
+  <title id="title">Offene Schatzkiste mit Goldstücken</title>
+  <desc id="desc">Eine leicht schräg von vorne gezeigte Holztruhe mit geöffnetem Deckel, gefüllt mit Goldmünzen. Vor der Kiste liegen weitere Münzen.</desc>
+  <defs>
+    <linearGradient id="wood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a94f20"/><stop offset=".48" stop-color="#743012"/><stop offset="1" stop-color="#4b1b0b"/>
+    </linearGradient>
+    <linearGradient id="woodLight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d8752e"/><stop offset="1" stop-color="#7d3213"/>
+    </linearGradient>
+    <linearGradient id="iron" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#695347"/><stop offset=".5" stop-color="#2f2725"/><stop offset="1" stop-color="#181416"/>
+    </linearGradient>
+    <radialGradient id="gold" cx="35%" cy="25%" r="75%">
+      <stop offset="0" stop-color="#fff19a"/><stop offset=".3" stop-color="#ffd33d"/><stop offset=".72" stop-color="#e79b09"/><stop offset="1" stop-color="#a85a00"/>
+    </radialGradient>
+    <linearGradient id="goldEdge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe26b"/><stop offset="1" stop-color="#b86a00"/>
+    </linearGradient>
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="170%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="7" stdDeviation="6" flood-color="#1d0d05" flood-opacity=".32"/>
+    </filter>
+    <clipPath id="chestOpening"><path d="M244 330 L673 293 L740 359 L292 405 Z"/></clipPath>
+  </defs>
+
+  <!-- ground shadow -->
+  <ellipse cx="463" cy="550" rx="330" ry="48" fill="#352010" opacity=".22" filter="url(#shadow)"/>
+
+  <!-- open lid, seen slightly from the right -->
+  <g filter="url(#soft)">
+    <path d="M236 321 L261 126 Q264 100 292 93 L648 70 Q675 69 687 94 L727 284 Z" fill="url(#wood)" stroke="#3b170c" stroke-width="8"/>
+    <path d="M276 288 L294 137 L644 112 L684 263 Z" fill="url(#woodLight)" stroke="#4a1d0d" stroke-width="7"/>
+    <path d="M289 191 L661 164" fill="none" stroke="#67280f" stroke-width="7" opacity=".65"/>
+    <path d="M282 245 L676 214" fill="none" stroke="#67280f" stroke-width="7" opacity=".65"/>
+    <path d="M246 314 L261 126 Q264 100 292 93 L648 70 Q675 69 687 94 L724 274" fill="none" stroke="url(#iron)" stroke-width="19"/>
+    <path d="M337 91 L340 286 M570 76 L604 270" fill="none" stroke="url(#iron)" stroke-width="18" opacity=".95"/>
+    <path d="M272 300 L715 264 L727 284 L236 321 Z" fill="#1f1715" stroke="#100c0b" stroke-width="5"/>
+    <circle cx="338" cy="102" r="6" fill="#b29573"/><circle cx="571" cy="87" r="6" fill="#b29573"/>
+  </g>
+
+  <!-- dark opening -->
+  <path d="M226 326 L674 286 L750 357 L292 413 Z" fill="#21100a" stroke="#2d1510" stroke-width="9"/>
+
+  <!-- treasure inside -->
+  <g clip-path="url(#chestOpening)" stroke="#a86200" stroke-width="3">
+    <ellipse cx="323" cy="354" rx="43" ry="17" fill="url(#gold)"/>
+    <ellipse cx="383" cy="339" rx="43" ry="17" fill="url(#gold)"/>
+    <ellipse cx="447" cy="344" rx="43" ry="17" fill="url(#gold)"/>
+    <ellipse cx="508" cy="326" rx="43" ry="17" fill="url(#gold)"/>
+    <ellipse cx="575" cy="325" rx="43" ry="17" fill="url(#gold)"/>
+    <ellipse cx="640" cy="321" rx="43" ry="17" fill="url(#gold)"/>
+    <ellipse cx="691" cy="345" rx="43" ry="17" fill="url(#gold)"/>
+    <ellipse cx="350" cy="382" rx="43" ry="17" fill="url(#gold)"/>
+    <ellipse cx="418" cy="370" rx="43" ry="17" fill="url(#gold)"/>
+    <ellipse cx="486" cy="366" rx="43" ry="17" fill="url(#gold)"/>
+    <ellipse cx="552" cy="355" rx="43" ry="17" fill="url(#gold)"/>
+    <ellipse cx="617" cy="359" rx="43" ry="17" fill="url(#gold)"/>
+    <circle cx="392" cy="329" r="29" fill="url(#gold)"/><circle cx="392" cy="329" r="18" fill="none" opacity=".65"/>
+    <circle cx="541" cy="318" r="31" fill="url(#gold)"/><circle cx="541" cy="318" r="19" fill="none" opacity=".65"/>
+  </g>
+
+  <!-- chest body -->
+  <g filter="url(#soft)">
+    <path d="M228 334 L676 294 L750 356 L718 526 L285 568 L207 503 Z" fill="url(#wood)" stroke="#3b170c" stroke-width="9"/>
+    <path d="M228 334 L676 294 L750 356 L292 407 Z" fill="#bc5d25" stroke="#4a1d0d" stroke-width="7"/>
+    <path d="M292 407 L750 356 L718 526 L285 568 Z" fill="url(#woodLight)" stroke="#4a1d0d" stroke-width="7"/>
+    <path d="M207 503 L228 334 L292 407 L285 568 Z" fill="#64250f" stroke="#3b170c" stroke-width="7"/>
+    <path d="M300 455 L736 407 M293 516 L724 469" fill="none" stroke="#6d290f" stroke-width="8" opacity=".7"/>
+    <!-- metal bands -->
+    <path d="M281 395 L295 568 M657 365 L634 535" fill="none" stroke="url(#iron)" stroke-width="22"/>
+    <path d="M215 389 L742 338 M209 491 L725 452 M286 557 L718 515" fill="none" stroke="url(#iron)" stroke-width="18"/>
+    <!-- lock -->
+    <path d="M469 391 L551 382 L547 467 Q508 488 470 473 Z" fill="url(#iron)" stroke="#171214" stroke-width="6"/>
+    <path d="M489 391 Q488 351 513 349 Q540 348 537 384" fill="none" stroke="#312928" stroke-width="13"/>
+    <circle cx="512" cy="422" r="11" fill="#d9a925"/><path d="M512 431 L508 448 L519 447 Z" fill="#d9a925"/>
+    <!-- rivets -->
+    <g fill="#aa9278"><circle cx="289" cy="420" r="5"/><circle cx="296" cy="541" r="5"/><circle cx="650" cy="389" r="5"/><circle cx="636" cy="513" r="5"/><circle cx="236" cy="387" r="5"/><circle cx="705" cy="344" r="5"/></g>
+  </g>
+
+  <!-- clearly visible mound of gold above the front rim -->
+  <g filter="url(#soft)" stroke="#9b5700" stroke-width="3">
+    <!-- back row -->
+    <ellipse cx="319" cy="347" rx="42" ry="17" fill="url(#gold)"/>
+    <ellipse cx="378" cy="335" rx="44" ry="18" fill="url(#gold)"/>
+    <ellipse cx="438" cy="330" rx="45" ry="18" fill="url(#gold)"/>
+    <ellipse cx="501" cy="320" rx="45" ry="18" fill="url(#gold)"/>
+    <ellipse cx="565" cy="316" rx="44" ry="18" fill="url(#gold)"/>
+    <ellipse cx="628" cy="320" rx="43" ry="17" fill="url(#gold)"/>
+    <ellipse cx="681" cy="337" rx="39" ry="16" fill="url(#gold)"/>
+    <!-- middle row -->
+    <ellipse cx="341" cy="369" rx="45" ry="18" fill="url(#gold)"/>
+    <ellipse cx="405" cy="357" rx="46" ry="18" fill="url(#gold)"/>
+    <ellipse cx="469" cy="352" rx="47" ry="19" fill="url(#gold)"/>
+    <ellipse cx="535" cy="344" rx="46" ry="19" fill="url(#gold)"/>
+    <ellipse cx="600" cy="347" rx="45" ry="18" fill="url(#gold)"/>
+    <ellipse cx="657" cy="362" rx="42" ry="17" fill="url(#gold)"/>
+    <!-- front row overlapping the rim -->
+    <ellipse cx="359" cy="392" rx="43" ry="18" fill="url(#gold)"/>
+    <ellipse cx="421" cy="383" rx="46" ry="19" fill="url(#gold)"/>
+    <ellipse cx="486" cy="378" rx="47" ry="19" fill="url(#gold)"/>
+    <ellipse cx="552" cy="373" rx="47" ry="19" fill="url(#gold)"/>
+    <ellipse cx="616" cy="379" rx="44" ry="18" fill="url(#gold)"/>
+    <!-- upright coins make the contents unmistakable -->
+    <g transform="translate(400 326) rotate(-12)">
+      <circle r="31" fill="url(#gold)"/><circle r="21" fill="none" stroke="#e6a00a"/>
+      <path d="M-9 0 Q0-13 9 0 Q0 13-9 0Z" fill="#efb414" stroke="none"/>
+    </g>
+    <g transform="translate(512 314) rotate(8)">
+      <circle r="34" fill="url(#gold)"/><circle r="23" fill="none" stroke="#e6a00a"/>
+      <path d="M0-13 L4-4 L14 0 L4 4 L0 14 L-4 4 L-14 0 L-4-4Z" fill="#f6c52b" stroke="none"/>
+    </g>
+    <g transform="translate(588 337) rotate(15)">
+      <circle r="28" fill="url(#gold)"/><circle r="18" fill="none" stroke="#e6a00a"/>
+    </g>
+  </g>
+
+  <!-- front rim placed over the lower edge of the treasure -->
+  <path d="M282 397 L745 346 L750 365 L289 417 Z" fill="url(#iron)" stroke="#171214" stroke-width="5"/>
+  <g fill="#ad9375">
+    <circle cx="309" cy="399" r="5"/><circle cx="421" cy="386" r="5"/><circle cx="535" cy="374" r="5"/><circle cx="649" cy="361" r="5"/><circle cx="724" cy="353" r="5"/>
+  </g>
+
+  <!-- extra wood grain and corner hardware -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M327 446 Q382 426 441 437 M331 485 Q392 466 455 477 M565 427 Q625 406 685 417 M554 482 Q621 459 686 472" stroke="#e18a43" stroke-width="5" opacity=".42"/>
+    <path d="M348 447 Q374 438 402 441 M586 429 Q614 419 645 422" stroke="#4f1c0c" stroke-width="4" opacity=".55"/>
+  </g>
+  <path d="M276 407 L310 403 L300 556 L274 559 Z M634 368 L669 364 L647 526 L616 530 Z" fill="url(#iron)" stroke="#161214" stroke-width="4" opacity=".96"/>
+
+  <!-- coins in front -->
+  <g filter="url(#soft)">
+    <g transform="translate(174 535) rotate(-10)"><path d="M-41 0 V15 Q0 34 41 15 V0" fill="url(#goldEdge)" stroke="#a86200" stroke-width="3"/><ellipse rx="41" ry="16" fill="url(#gold)" stroke="#a86200" stroke-width="3"/><ellipse rx="28" ry="10" fill="none" stroke="#eba70d" stroke-width="3"/></g>
+    <g transform="translate(240 579) rotate(7)"><path d="M-44 0 V15 Q0 35 44 15 V0" fill="url(#goldEdge)" stroke="#a86200" stroke-width="3"/><ellipse rx="44" ry="17" fill="url(#gold)" stroke="#a86200" stroke-width="3"/><ellipse rx="29" ry="10" fill="none" stroke="#eba70d" stroke-width="3"/></g>
+    <g transform="translate(666 566) rotate(-7)"><path d="M-45 0 V16 Q0 36 45 16 V0" fill="url(#goldEdge)" stroke="#a86200" stroke-width="3"/><ellipse rx="45" ry="17" fill="url(#gold)" stroke="#a86200" stroke-width="3"/><ellipse rx="30" ry="10" fill="none" stroke="#eba70d" stroke-width="3"/></g>
+    <g transform="translate(754 523) rotate(12)"><path d="M-39 0 V14 Q0 31 39 14 V0" fill="url(#goldEdge)" stroke="#a86200" stroke-width="3"/><ellipse rx="39" ry="15" fill="url(#gold)" stroke="#a86200" stroke-width="3"/><ellipse rx="26" ry="9" fill="none" stroke="#eba70d" stroke-width="3"/></g>
+    <g transform="translate(593 596) rotate(4)"><path d="M-36 0 V13 Q0 29 36 13 V0" fill="url(#goldEdge)" stroke="#a86200" stroke-width="3"/><ellipse rx="36" ry="14" fill="url(#gold)" stroke="#a86200" stroke-width="3"/><ellipse rx="23" ry="8" fill="none" stroke="#eba70d" stroke-width="3"/></g>
+  </g>
+</svg>
