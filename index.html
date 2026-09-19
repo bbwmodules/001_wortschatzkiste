@@ -329,6 +329,22 @@
   </main>
   <script>
     const dataPath = "data/";
+    const dataCatalog = {
+      cloudservices: [
+        "10.8_Glossar_CloudComputingModelle.json",
+        "10.8_Glossar_Migration_DevOps.json",
+        "10.8_Glossar_weitere_Begriffe.json"
+      ],
+      html_css: [
+        "11.1_html-css_einstieg.json",
+        "11.2_html-css_ersteschritte.json",
+        "11.3_html-css_hypertextundbilder.json",
+        "11.4_html-css_gestaltungmitcss.json",
+        "11.5_html-css_layoutmitcss.json"
+      ],
+      java: ["java_basics.json"],
+      networking: ["networking.json"]
+    };
     const areaSelect = document.getElementById("areaSelect");
     const topicSelect = document.getElementById("topicSelect");
     const cardEl = document.getElementById("card");
@@ -349,38 +365,12 @@
     let choiceAnswered = false;
     let areaFromUrl = new URLSearchParams(window.location.search).get("topic");
 
-    async function readDirectory(path) {
-      const response = await fetch(path, { cache: "no-store" });
-      if (!response.ok) throw new Error(`Verzeichnis nicht gefunden: ${path}`);
-      const html = await response.text();
-      const documentFragment = new DOMParser().parseFromString(html, "text/html");
-      const baseUrl = new URL(path, window.location.href);
-      const basePath = baseUrl.pathname.endsWith("/") ? baseUrl.pathname : `${baseUrl.pathname}/`;
-      return [...documentFragment.querySelectorAll("a")]
-        .map(link => link.getAttribute("href"))
-        .filter(Boolean)
-        .map(href => {
-          const targetUrl = new URL(href, baseUrl);
-          if (targetUrl.pathname === basePath.slice(0, -1)) return "../";
-          if (!targetUrl.pathname.startsWith(basePath)) return null;
-          const entry = targetUrl.pathname.slice(basePath.length);
-          return entry && !entry.includes(".") && !entry.endsWith("/") ? `${entry}/` : entry;
-        })
-        .filter(Boolean);
+    function discoverAreas() {
+      return Object.keys(dataCatalog);
     }
 
-    async function discoverAreas() {
-      const entries = await readDirectory(dataPath);
-      return entries
-        .filter(entry => entry.endsWith("/") && entry !== "../")
-        .map(entry => decodeURIComponent(entry.slice(0, -1)));
-    }
-
-    async function discoverFiles(area) {
-      const entries = await readDirectory(`${dataPath}${encodeURIComponent(area)}/`);
-      return entries
-        .filter(entry => entry.toLowerCase().endsWith(".json"))
-        .map(entry => decodeURIComponent(entry));
+    function discoverFiles(area) {
+      return dataCatalog[area] || [];
     }
 
     function flipCard() {

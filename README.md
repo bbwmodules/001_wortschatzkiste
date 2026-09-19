@@ -11,8 +11,9 @@ Zu verschiedenen IT-Themen und auf verschiedene Arten und Weisen können Begriff
 ## Themen hinzufügen
 - Neue JSON-Datei unter /data/<thema> anlegen.
 - Struktur siehe `networking.json`.
+- Den Dateinamen zusätzlich im `dataCatalog` in `index.html` eintragen.
 
-Die Datenstruktur wird  dynamisch angebunden:
+Die Datenstruktur wird über einen Katalog in `index.html` angebunden, weil GitHub Pages keine Verzeichnislistings für `/data/` bereitstellt:
 
 ### Ohne URL-Themenbereich:
 
