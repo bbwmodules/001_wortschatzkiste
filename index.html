@@ -39,6 +39,15 @@
       flex-wrap: wrap;
     }
 
+    .controls label {
+      display: grid;
+      gap: 5px;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .controls label[hidden] { display: none; }
+
     .section-divider {
       height: 1px;
       margin: 30px 0 26px;
@@ -257,8 +266,14 @@
       />
     </div>
     <div class="controls">
-      <select id="areaSelect" aria-label="Themenbereich auswählen"></select>
-      <select id="topicSelect" aria-label="Thema auswählen"></select>
+      <label id="areaLabel">
+        Bereich wählen
+        <select id="areaSelect" aria-label="Bereich wählen"></select>
+      </label>
+      <label>
+        Thema wählen
+        <select id="topicSelect" aria-label="Thema wählen"></select>
+      </label>
       <button id="load" type="button">Laden</button>
     </div>
     <hr class="section-divider" aria-hidden="true" />
@@ -345,6 +360,7 @@
       java: ["java_basics.json"],
       networking: ["networking.json"]
     };
+    const areaLabel = document.getElementById("areaLabel");
     const areaSelect = document.getElementById("areaSelect");
     const topicSelect = document.getElementById("topicSelect");
     const cardEl = document.getElementById("card");
@@ -385,7 +401,9 @@
         option.textContent = area;
         areaSelect.appendChild(option);
       });
-      areaSelect.hidden = Boolean(areaFromUrl);
+      const areaHidden = Boolean(areaFromUrl);
+      areaSelect.hidden = areaHidden;
+      areaLabel.hidden = areaHidden;
     }
 
     async function renderTopics(area, selectedFile) {
@@ -607,6 +625,7 @@
     areaSelect.onchange = async () => {
       areaFromUrl = null;
       areaSelect.hidden = false;
+      areaLabel.hidden = false;
       await renderTopics(areaSelect.value);
       await loadSelection();
     };
