@@ -1,22 +1,22 @@
-# Flashcards Project
+# Die Wort-Schatz-Kiste
 
-Dies ist ein Minimalbeispiel für digitale Lernkärtchen mit GitHub Pages.
+Zu verschiedenen IT-Themen und auf verschiedene Arten und Weisen können Begriffe und Wörter spielersich sich angeeignet werden.
 
 ## Nutzung
 1. Repository auf GitHub erstellen und Dateien hochladen.
-2. GitHub Pages in den Settings aktivieren (Branch: main, Root).
+2. GitHub Pages in den Settings aktivieren (Branch: master, Root).
 3. Seite öffnen: https://<dein-user>.github.io/<repo>/
 4. Thema wählen und loslegen.
 
 ## Themen hinzufügen
-- Neue JSON-Datei unter /data anlegen.
+- Neue JSON-Datei unter /data/<thema> anlegen.
 - Struktur siehe `networking.json`.
 
 Die Datenstruktur wird  dynamisch angebunden:
 
 ### Ohne URL-Themenbereich:
 
-Auswahlfeld zBsp für _html_css, java, networking_ <br/>
+Auswahlfeld erscheint zu den Themen: zBsp für _html_css, java, networking_ <br/>
 Danach Auswahlfeld mit den topic-Texten der JSON-Dateien
 
 ### Mit URL-Themenbereich
