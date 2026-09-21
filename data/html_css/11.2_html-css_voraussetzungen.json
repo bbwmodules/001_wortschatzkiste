@@ -1,0 +1,71 @@
+{
+  "topic": "HTML-CSS: Voraussetzungen",
+  "description": "Voraussetzungen für einen Webauftritt.",
+  "cards": [
+    {
+      "b": "Browser",
+      "q": "Was ist ein Browser?",
+      "a": "Ein Browser ist ein Programm, mit dem Sie Webseiten aus dem Internet anzeigen und nutzen können. Er sendet Anfragen an einen Webserver, empfängt Daten (HTML, CSS, JavaScript, Bilder …) und stellt sie grafisch dar."
+    },
+    {
+      "b": "Editor",
+      "q": "Was ist ein Editor?",
+      "a": "Ein Editor ist ein Programm, mit dem Sie Texte bearbeiten können. In der Webentwicklung wird er oft für das Schreiben von HTML, CSS und JavaScript-Code verwendet."
+    },
+    {
+      "b": "Texteditor",
+      "q": "Was ist ein Texteditor?",
+      "a": "Ein Texteditor ist ein spezielles Programm zur Bearbeitung von Texten. In der Webentwicklung wird er verwendet, um HTML-, CSS- und JavaScript-Dateien zu erstellen und zu ändern."
+    },
+    {
+      "b": "Online-IDEs",
+      "q": "Was sind Online-IDEs?",
+      "a": "Online-IDEs sind integrierte Entwicklungsumgebungen, die in einem Webbrowser ausgeführt werden. Sie ermöglichen es, Code zu schreiben, zu debuggen und zu deployen, ohne lokale Entwicklungsumgebungen installieren zu müssen."
+    },
+    {
+      "b": "livecode",
+      "q": "Was ist livecode?",
+      "a": "livecode ist ein Konzept, bei dem Code im Browser editiert und in im Browser ausgeführt wird."
+    },
+    {
+      "b": "IDE",
+      "q": "Was ist eine IDE?",
+      "a": "Eine Integrated Development Environment (IDE) ist eine integrierte Entwicklungsumgebung wie zB IntelliJ. Sie erleichtert das Programmieren durch Editoren, Debugger und integrierte Server."
+    },
+    {
+      "b": "Datei index.html",
+      "q": "Wozu dient die Datei index.html?",
+      "a": "Die Datei index.html ist oft die Startseite einer Website. Webserver liefern sie automatisch aus, wenn man nur die Domain-URL eingibt (zB http://www.bbw.ch/)."
+    },
+    {
+      "b": "Webserver",
+      "q": "Was ist ein Webserver?",
+      "a": "Ein Webserver ist ein Computer, der Webseiten und andere Inhalte über das Internet bereitstellt. Er empfängt Anfragen von Clients (Browsern) und liefert die entsprechenden Dateien (HTML, CSS, Bilder …) zurück."
+    },
+    {
+      "b": "HTML",
+      "q": "Was bedeutet HTML?",
+      "a": "HTML steht für HyperText Markup Language. Es ist die Standard-Auszeichnungssprache, mit der der Inhalt von Webseiten strukturiert wird. Browser interpretieren den Code und zeigen die Seite an."
+    },
+    {
+      "b": "Markup",
+      "q": "Was ist Markup?",
+      "a": "Markup bedeutet Auszeichnung. HTML ist eine Markup-Sprache, bei der Inhalte mit Tags ausgezeichnet werden, damit der Browser weiss, wie sie dargestellt werden sollen."
+    },
+    {
+      "b": "Text",
+      "q": "Was ist der Unterschied zwischen normalem Text und HTML im Browser?",
+      "a": "Normaler Text wird vom Browser einfach als Text dargestellt. HTML-Code wird interpretiert und kann Struktur (Überschriften, Absätze, Listen) oder Formatierung vorgeben."
+    },
+    {
+      "b": "Homepage",
+      "q": "Was ist eine Homepage?",
+      "a": "Die Homepage ist die Startseite einer Website, also die erste Seite, die beim Aufruf angezeigt wird (oft index.html)."
+    },
+    {
+      "b": "Domain",
+      "q": "Was ist eine Domain?",
+      "a": "Eine Domain ist der eindeutige Name einer Website im Internet. Sie übersetzt eine IP-Adresse (zBsp 142.250.186.206) in einen lesbaren Namen (zBsp www.bbw.ch). Eine Domain besteht aus TLD (.com, .ch), Second-Level (zBsp bbw) und optionalen Subdomains (zBsp www, mail)."
+    }
+  ]
+}

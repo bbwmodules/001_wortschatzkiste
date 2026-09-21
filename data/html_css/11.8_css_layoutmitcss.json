@@ -1,5 +1,5 @@
 {
-  "topic": "_HTML-CSS Layout mit CSS",
+  "topic": "CSS: Layout mit CSS",
   "description": "Box-Modell, Display, Position und Layout-Elemente",
   "cards": [
     {
@@ -37,7 +37,6 @@
       "q": "Welche Positionierungsarten gibt es in CSS?",
       "a": "static (Standardfluss), relative (verschoben zur Standardposition), absolute (relativ zu nächstem positionierten Elternelement), fixed (bleibt fix beim Scrollen), sticky (Mischung aus relative und fixed)."
     },
-
     {
       "b": "block",
       "q": "Was bedeutet block?",

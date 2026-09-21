@@ -1,12 +1,7 @@
 {
-  "topic": "11.4_HTML-CSS-Gestaltung-Mit-CSS",
+  "topic": "CSS: Gestaltung mit CSS",
   "description": "CSS, Einbindung, Eigenschaften, Einheiten, Selektoren",
   "cards": [
-    {
-      "b": "HTML",
-      "q": "Grundprinzip HTML",
-      "a": "HTML beschreibt die Struktur (Inhalt)."
-    },
     {
       "b": "CSS",
       "q": "Grundprinzip CSS",
@@ -67,7 +62,6 @@
       "q": "Eigenschaft: width",
       "a": "Breite eines Elements (z. B. Bild, div), z. B. 150px oder 50%."
     },
-
     {
       "b": "px",
       "q": "Einheit: px",
@@ -144,11 +138,10 @@
       "a": "Zielt auf Attribute: input[type=\"text\"] { border: 1px solid gray; }."
     },
     {
-      "b": "Kaskade",
+      "b": "Cascading",
       "q": "Cascading (Kaskade)",
       "a": "Regeln überlagern sich; spezifischere gewinnt (z. B. #id vor .klasse vor element). Ergebnis richtet sich nach Spezifität/Reihenfolge."
     },
-
     {
       "b": "Unterliste",
       "q": "Unter-Liste (verschachtelte Liste)",

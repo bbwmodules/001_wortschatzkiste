@@ -1,0 +1,76 @@
+{
+  "topic": "HTML: Text-Tags",
+  "description": "Tags für Textinhalte in HTML",
+  "cards": [
+    {
+      "b": "heading",
+      "q": "Was ist ein heading?",
+      "a": "Ein heading ist eine Überschrift in HTML. Es gibt verschiedene Level von Headings, beginnend mit '<h1>' bis '<h6>'."
+    },
+    {
+      "b": "<h1>",
+      "q": "Was bewirkt das <h1>-Tag?",
+      "a": "<h1> definiert die wichtigste Überschrift einer Seite. Es wird meist gross und fett dargestellt."
+    },
+    {
+      "b": "paragraph",
+      "q": "Was ist ein paragraph?",
+      "a": "Ein paragraph ist ein Textabsatz in HTML. Er wird normalerweise mit einem Zeilenumbruch abgeschlossen."
+    },
+    {
+      "b": "<p>",
+      "q": "Was bewirkt das <p>-Tag?",
+      "a": "'<p>' steht für Paragraph und kennzeichnet einen Textabsatz in HTML."
+    },
+    {
+      "b": "Liste",
+      "q": "Was ist eine Liste?",
+      "a": "Eine Liste ist eine geordnete Sammlung von Elementen in HTML. Es gibt nummerierte Listen '<ol>' und Aufzählungslisten '<ul>'."
+    },
+    {
+      "b": "<ol>",
+      "q": "Was bewirkt das <ol>-Tag?",
+      "a": "'<ol>' steht für 'ordered list' und kennzeichnet eine nummerierte Liste."
+    },
+    {
+      "b": "<ul>",
+      "q": "Was bewirkt das <ul>-Tag?",
+      "a": "'<ul>' steht für 'unordered list' und kennzeichnet eine Aufzählungsliste mit Punkten."
+    },
+    {
+      "b": "<li>",
+      "q": "Was bewirkt das <li>-Tag?",
+      "a": "'<li>' steht für 'list item' und kennzeichnet ein einzelnes Listenelement innerhalb von '<ol>' oder '<ul>'."
+    },
+    {
+      "b": "Einrücken",
+      "q": "Wozu dient das Einrücken?",
+      "a": "Das Einrücken verbessert die Lesbarkeit und macht die Verschachtelung der Elemente sichtbar."
+    },
+    {
+      "b": "Tabellen",
+      "q": "Was ist eine Tabelle?",
+      "a": "Eine Tabelle ist eine Struktur in HTML, die Daten in Zeilen und Spalten organisiert."
+    },
+    {
+      "b": "<table>",
+      "q": "Was bewirkt das <table>-Tag?",
+      "a": "'<table>' kennzeichnet den Beginn einer Tabelle in HTML."
+    },
+    {
+      "b": "<tr>",
+      "q": "Was bewirkt das <tr>-Tag?",
+      "a": "'<tr>' steht für 'table row' und kennzeichnet eine Zeile innerhalb einer Tabelle."
+    },
+    {
+      "b": "<th>",
+      "q": "Was bewirkt das <th>-Tag?",
+      "a": "'<th>' steht für 'table header' und kennzeichnet eine Header-Zelle in einer Tabelle."
+    },
+    {
+      "b": "<td>",
+      "q": "Was bewirkt das <td>-Tag?",
+      "a": "'<td>' steht für 'table data' und kennzeichnet eine Zelle innerhalb einer Tabellenzeile."
+    }
+  ]
+}

@@ -205,6 +205,7 @@
       box-shadow: 0 18px 45px rgba(47, 55, 67, .13);
       text-align: center;
       font-size: clamp(1.3rem, 3vw, 1.8rem);
+      font-weight: normal;
       line-height: 1.45;
     }
 
@@ -275,6 +276,7 @@
         <select id="topicSelect" aria-label="Thema wählen"></select>
       </label>
       <button id="load" type="button">Laden</button>
+      <button id="export" type="button">Export</button>
     </div>
     <hr class="section-divider" aria-hidden="true" />
 
@@ -351,11 +353,14 @@
         "10.8_Glossar_weitere_Begriffe.json"
       ],
       html_css: [
-        "11.1_html-css_einstieg.json",
-        "11.2_html-css_ersteschritte.json",
-        "11.3_html-css_hypertextundbilder.json",
-        "11.4_html-css_gestaltungmitcss.json",
-        "11.5_html-css_layoutmitcss.json"
+        "11.1_html-css_webauftritt.json",
+        "11.2_html-css_voraussetzungen.json",
+        "11.3_html_html_head_body.json",
+        "11.4_html_text-tags.json",
+        "11.5_html_weitere_text-tags.json",
+        "11.6_html_nav-image-tags.json",
+        "11.7_css_gestaltungmitcss.json",
+        "11.8_css_layoutmitcss.json"
       ],
       java: ["java_basics.json"],
       networking: ["networking.json"]
@@ -428,6 +433,32 @@
       renderCard();
     }
 
+    function exportDeck() {
+      if (!deck.cards.length) return;
+      const cards = deck.cards.map(card => ({ q: card.q, a: card.a }));
+      const markdown = [
+        `# ${deck.topic || "Wort-Schatz-Kiste"}`,
+        "",
+        ...cards.flatMap((card, cardIndex) => [
+          `## Karte ${cardIndex + 1}`,
+          "",
+          "```json",
+          JSON.stringify(card, null, 2),
+          "```",
+          ""
+        ])
+      ].join("\n");
+      const topicSlug = (deck.topic || "wort-schatz-kiste")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-|-$/g, "");
+      const download = document.createElement("a");
+      download.href = URL.createObjectURL(new Blob([markdown], { type: "text/markdown;charset=utf-8" }));
+      download.download = `${topicSlug || "wort-schatz-kiste"}.md`;
+      download.click();
+      URL.revokeObjectURL(download.href);
+    }
+
     function renderCard() {
       if (!deck.cards.length) return;
       const c = deck.cards[idx];
@@ -442,10 +473,18 @@
 
     function maskTermInExplanation(explanation, term) {
       if (!term) return explanation;
-      const escapedTerm = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-      const letterCount = [...term].filter(character => /\p{L}/u.test(character)).length;
-      const mask = "*".repeat(letterCount);
-      return explanation.replace(new RegExp(escapedTerm, "giu"), mask);
+      const maskLength = term.startsWith("<") && term.endsWith(">")
+        ? term.length
+        : [...term].filter(character => /\p{L}/u.test(character)).length;
+      const mask = "*".repeat(maskLength);
+      const variants = new Set([term]);
+      const plainTerm = term.replace(/^<|>$/g, "");
+      if (plainTerm !== term) variants.add(plainTerm);
+      if (!term.startsWith("<") && !term.endsWith(">")) variants.add(`<${term}>`);
+      const escapedVariants = [...variants]
+        .sort((first, second) => second.length - first.length)
+        .map(variant => variant.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+      return explanation.replace(new RegExp(escapedVariants.join("|"), "giu"), mask);
     }
 
     function createExercise() {
@@ -476,8 +515,14 @@
       exerciseCards.forEach(card => {
         const row = document.createElement("div");
         row.className = "explanation-row";
-        row.innerHTML = `<div class="explanation">${card.a}</div><div class="drop-zone" data-card-id="${card.id}">Begriff hier ablegen</div>`;
-        const dropZone = row.querySelector(".drop-zone");
+        const explanation = document.createElement("div");
+        explanation.className = "explanation";
+        explanation.textContent = maskTermInExplanation(card.a, card.b);
+        const dropZone = document.createElement("div");
+        dropZone.className = "drop-zone";
+        dropZone.dataset.cardId = card.id;
+        dropZone.textContent = "Begriff hier ablegen";
+        row.append(explanation, dropZone);
         dropZone.addEventListener("dragover", event => {
           event.preventDefault();
           dropZone.classList.add("is-over");
@@ -631,6 +676,7 @@
     };
     topicSelect.onchange = loadSelection;
     document.getElementById("load").onclick = loadSelection;
+    document.getElementById("export").onclick = exportDeck;
     document.getElementById("flip").onclick = flipCard;
     cardEl.onclick = flipCard;
     cardEl.onkeydown = event => {

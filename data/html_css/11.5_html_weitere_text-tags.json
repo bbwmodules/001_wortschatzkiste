@@ -1,0 +1,61 @@
+{
+  "topic": "HTML: weitere Text-Tags",
+  "description": "Weitere Tags für Textinhalte in HTML",
+  "cards": [
+    {
+      "b": "strong",
+      "q": "Was bewirkt das <strong>-Tag?",
+      "a": "Ein strong ist ein HTML-Tag, der Text fett darstellt."
+    },
+    {
+      "b": "<em>",
+      "q": "Was bewirkt das <em>-Tag?",
+      "a": "<em> ist ein HTML-Tag, der Text kursiv darstellt."
+    },
+    {
+      "b": "mark",
+      "q": "Was bewirkt das <mark>-Tag?",
+      "a": "<mark> ist ein HTML-Tag, der Text hervorhebt."
+    },
+    {
+      "b": "small",
+      "q": "Was bewirkt das <small>-Tag?",
+      "a": "<small> ist ein HTML-Tag, der Text kleiner darstellt."
+    },
+    {
+      "b": "sub",
+      "q": "Was ist ein sub?",
+      "a": "Ein sub ist ein HTML-Tag, der Text als Untertitel darstellt."
+    },
+    {
+      "b": "<sup>",
+      "q": "Was bewirkt das <sup>-Tag?",
+      "a": "<sup> ist ein HTML-Tag, der Text als Hochgestellt darstellt."
+    },
+    {
+      "b": "<code>",
+      "q": "Was ist ein <code>-Tag?",
+      "a": "<code> ist ein HTML-Tag, der Text als Code darstellt."
+    },
+    {
+      "b": "<blockquote>",
+      "q": "Was bewirkt das <blockquote>-Tag?",
+      "a": "<blockquote> ist ein HTML-Tag, der einen zitierten Text darstellt."
+    },
+    {
+      "b": "<q>",
+      "q": "Was bewirkt das <q>-Tag?",
+      "a": "<q> ist ein HTML-Tag, der einen kurzen zitierten Text darstellt."
+    },
+    {
+      "b": "<br>",
+      "q": "Was bewirkt das <br>-Tag?",
+      "a": "<br> ist ein HTML-Tag, der eine Zeilenumbruch einfügt."
+    },
+    {
+      "b": "<hr>",
+      "q": "Wozu dient das <hr>-Tag?",
+      "a": "<hr> ist ein HTML-Tag, der eine horizontale Linie darstellt."
+    }
+  ]
+}

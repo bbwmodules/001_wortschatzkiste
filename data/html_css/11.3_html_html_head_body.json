@@ -1,0 +1,51 @@
+{
+  "topic": "HTML-CSS: Konzept und erste Tags",
+  "description": "HTML Konzept und erste Tags",
+  "cards": [
+    {
+      "b": "Konzept von HTML",
+      "q": "Was ist das Konzept von HTML?",
+      "a": "Das Konzept von HTML basiert auf ist aus ineinander verschachtelten Elementen aufgebaut. Jedes Element wird durch ein Tag-Paar markiert, das den Anfang und das Ende des Elements kennzeichnet"
+    },
+    {
+      "b": "Tags",
+      "q": "Was sind Tags in HTML?",
+      "a": "Tags sind Auszeichnungselemente in spitzen Klammern wie <p> oder <h1>. Sie geben dem Browser Anweisungen, wie Inhalte strukturiert oder dargestellt werden."
+    },
+    {
+      "b": "Anfangs-Tag",
+      "q": "Was ist ein Anfangs-Tag?",
+      "a": "Ein Anfangs-Tag öffnet ein Element, z. B. <p>. Danach folgt der Inhalt, der durch das Tag ausgezeichnet wird."
+    },
+    {
+      "b": "Ende-Tag",
+      "q": "Was ist ein Ende-Tag?",
+      "a": "Ein Ende-Tag schliesst ein Element, z. B. </p>. Zusammen mit dem Anfangs-Tag bildet es ein Element."
+    },
+    {
+      "b": "richtig einrücken",
+      "q": "Warum sollte man HTML-Code richtig einrücken?",
+      "a": "Das Einrücken macht den Code besser lesbar und verständlicher. Für den Browser spielt es keine Rolle, aber für Entwickler erhöht es die Übersichtlichkeit."
+    },
+    {
+      "b": "<html>",
+      "q": "Was bewirkt das <html>-Tag?",
+      "a": "<html> ist das Root-Element aller HTML-Dokumente. Es umschliesst den gesamten Inhalt einer Seite."
+    },     
+    {
+      "b": "<head>",
+      "q": "Was bewirkt das <head>-Tag?",
+      "a": "<head> enthält Metadaten über die Seite, wie zBsp. den Titel, die Beschreibung und die verwendeten Stylesheets."
+    },
+    {
+      "b": "<body>",
+      "q": "Was bewirkt das <body>-Tag?",
+      "a": "<body> enthält den sichtbaren Inhalt der Seite, wie Text, Bilder und andere Elemente."
+    },
+    {
+      "b": "<title>",
+      "q": "Was bewirkt das <title>-Tag?",
+      "a": "<title> definiert den Titel der Seite, der im Browser-Tab angezeigt wird, während ein Heading in der Seite als Überschrift erscheint."
+    }
+  ]
+}
