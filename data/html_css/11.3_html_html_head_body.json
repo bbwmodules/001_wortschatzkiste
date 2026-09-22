@@ -3,24 +3,44 @@
   "description": "HTML Konzept und erste Tags",
   "cards": [
     {
+      "b": "HTML",
+      "q": "Was heisst HTML?",
+      "a": "(HyperText Markup Language) ist die Sprache, mit der die Inhalte einer Webseite strukturiert werden."
+      },
+    {
+      "b": "Markup",
+      "q": "Was heisst Markup?",
+      "a": "**Markup** bedeutet „Auszeichnung“: Texte werden mit speziellen Zeichen (HTML-Elemente) versehen, um ihre Bedeutung festzulegen, beispielsweise als Überschrift, Absatz oder Link."
+      },
+    {
       "b": "Konzept von HTML",
       "q": "Was ist das Konzept von HTML?",
-      "a": "Das Konzept von HTML basiert auf ist aus ineinander verschachtelten Elementen aufgebaut. Jedes Element wird durch ein Tag-Paar markiert, das den Anfang und das Ende des Elements kennzeichnet"
+      "a": "Das Konzept von HTMLbesteht darin, die Inhalte einer Webseite mit hierarchisch verschachtelten Elementen zu strukturieren und ihre Bedeutung zu kennzeichnen"
+    },
+    {
+      "b": "Element",
+      "q": "Was ist ein Element in HTML?",
+      "a": "Ein Element in HTML ist eine Kombination aus einem Start-Tag, dem Inhalt und zumeist einem End-Tag. Der Browser erkennt durch das Element die Bedeutung und Struktur des Inhalts."
     },
     {
       "b": "Tags",
       "q": "Was sind Tags in HTML?",
-      "a": "Tags sind Auszeichnungselemente in spitzen Klammern wie <p> oder <h1>. Sie geben dem Browser Anweisungen, wie Inhalte strukturiert oder dargestellt werden."
+      "a": "Ein Tag ist eine Kennzeichnung in spitzen Klammern. Es markiert den Anfang oder das Ende eines HTML-Elements."
     },
     {
       "b": "Anfangs-Tag",
       "q": "Was ist ein Anfangs-Tag?",
-      "a": "Ein Anfangs-Tag öffnet ein Element, z. B. <p>. Danach folgt der Inhalt, der durch das Tag ausgezeichnet wird."
+      "a": "Ein Anfangs-Tag öffnet ein Element, Bsp. <p>. Danach folgt der Inhalt, der durch das Tag ausgezeichnet wird."
     },
     {
-      "b": "Ende-Tag",
-      "q": "Was ist ein Ende-Tag?",
-      "a": "Ein Ende-Tag schliesst ein Element, z. B. </p>. Zusammen mit dem Anfangs-Tag bildet es ein Element."
+      "b": "End-Tag",
+      "q": "Was ist ein End-Tag?",
+      "a": "Ein End-Tag schliesst ein Element, Bsp. </p>. Zusammen mit dem Anfangs-Tag bildet es ein Element."
+    },
+    {
+      "b": "Attribute",
+      "q": "Was sind ein Attribute?",
+      "a": "Ein Start-Tag kann optional **Attribute** enthalten, die zusätzliche Informationen über das Element liefern."
     },
     {
       "b": "richtig einrücken",
