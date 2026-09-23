@@ -40,7 +40,7 @@
     {
       "b": "<li>",
       "q": "Was bewirkt das <li>-Tag?",
-      "a": "'<li>' steht für 'list item' und kennzeichnet ein einzelnes Listenelement innerhalb von '<ol>' oder '<ul>'."
+      "a": "'<li>' steht für 'List Item' und kennzeichnet ein einzelnes Listenelement innerhalb von '<ol>' oder '<ul>'."
     },
     {
       "b": "Einrücken",
