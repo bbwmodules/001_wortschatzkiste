@@ -230,6 +230,49 @@
     .choice-option.is-wrong { border-color: #c65353; background: #fff0f0; color: #8b2929; animation: shake 350ms ease; }
     .choice-navigation { justify-content: center; margin-top: 22px; }
 
+    .checkpoint-list {
+      display: grid;
+      gap: 16px;
+      margin: 30px 0 6px;
+    }
+
+    .checkpoint-card {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 18px 20px;
+      background: var(--paper);
+      box-shadow: 0 12px 30px rgba(47, 55, 67, .08);
+    }
+
+    .checkpoint-card.is-correct { border-color: #5f9c72; }
+    .checkpoint-card.is-wrong { border-color: #c65353; }
+
+    .checkpoint-question { margin-bottom: 10px; line-height: 1.4; }
+
+    .checkpoint-answer {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      font: inherit;
+      color: var(--ink);
+      background: var(--paper);
+    }
+
+    .checkpoint-answer:disabled { background: #f4f1ea; color: var(--muted); }
+
+    .checkpoint-feedback {
+      min-height: 20px;
+      margin-top: 8px;
+      font-size: .95rem;
+      font-weight: bold;
+    }
+
+    .checkpoint-feedback.is-correct { color: #275c37; }
+    .checkpoint-feedback.is-wrong { color: #8b2929; }
+
+    .checkpoint-score { margin-top: 4px; }
+
     @keyframes shake {
       0%, 100% { transform: translateX(0); }
       35% { transform: translateX(-6px); }
@@ -248,6 +291,7 @@
       .drop-zone { min-height: 62px; }
       .choice-options { grid-template-columns: 1fr; }
       .choice-question { padding: 26px 20px; }
+      .checkpoint-card { padding: 16px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -286,6 +330,7 @@
         <div class="controls">
           <button id="exerciseMode" type="button">zu Begriffe zuordnen</button>
           <button id="choiceMode" type="button">zu 1 aus 4</button>
+          <button id="checkpointMode" type="button">zu Checkpoint</button>
         </div>
       </div>
       <div class="card-stage">
@@ -311,6 +356,7 @@
         </div>
         <div class="controls">
           <button id="choiceFromMatching" type="button" class="secondary">zu 1 aus 4</button>
+          <button id="checkpointFromMatching" type="button" class="secondary">zu Checkpoint</button>
           <button id="backToCards" type="button" class="secondary">Zu den Flashcards</button>
         </div>
       </div>
@@ -329,6 +375,7 @@
         <div class="controls">
           <button id="choiceBackToCards" type="button" class="secondary">Zu den Flashcards</button>
           <button id="choiceToMatching" type="button" class="secondary">zu Begriffe zuordnen</button>
+          <button id="checkpointFromChoice" type="button" class="secondary">zu Checkpoint</button>
         </div>
       </div>
       <div id="choiceQuestion" class="choice-question"></div>
@@ -339,6 +386,27 @@
         <button id="choiceNext" type="button">Weiter</button>
       </div>
       <p id="choiceMessage" class="exercise-message" aria-live="polite"></p>
+    </section>
+
+    <section id="checkpointView" class="view is-hidden" aria-label="Checkpoint">
+      <div class="exercise-header">
+        <div>
+          <h2>Checkpoint</h2>
+          <div class="exercise-intro">Beantworte 6 zufällige Fragen aus eigener Kraft. Danach wird geprüft, ob der Begriff aus "b" richtig getroffen wurde.</div>
+        </div>
+        <div class="controls">
+          <button id="checkpointBackToCards" type="button" class="secondary">Zu den Flashcards</button>
+          <button id="checkpointToMatching" type="button" class="secondary">zu Begriffe zuordnen</button>
+          <button id="checkpointToChoice" type="button" class="secondary">zu 1 aus 4</button>
+        </div>
+      </div>
+      <div id="checkpointBoard"></div>
+      <div class="exercise-actions">
+        <button id="checkCheckpoint" type="button">Antworten prüfen</button>
+        <button id="showCheckpointSolutions" type="button" class="secondary">Lösung anzeigen</button>
+        <button id="newCheckpoint" type="button" class="secondary">Neu mischen</button>
+      </div>
+      <p id="checkpointMessage" class="exercise-message checkpoint-score" aria-live="polite"></p>
     </section>
     <footer style="text-align: center; margin-top: 40px;">
   ©    P.Rutschmann 2026 
@@ -379,11 +447,15 @@
     const choiceQuestion = document.getElementById("choiceQuestion");
     const choiceOptions = document.getElementById("choiceOptions");
     const choiceMessage = document.getElementById("choiceMessage");
+    const checkpointView = document.getElementById("checkpointView");
+    const checkpointBoard = document.getElementById("checkpointBoard");
+    const checkpointMessage = document.getElementById("checkpointMessage");
     let deck = { cards: [] };
     let idx = 0;
     let exerciseCards = [];
     let choiceIndex = 0;
     let choiceAnswered = false;
+    let checkpointCards = [];
     let areaFromUrl = new URLSearchParams(window.location.search).get("topic");
 
     function discoverAreas() {
@@ -590,6 +662,7 @@
     function showFlashcards() {
       exerciseView.classList.add("is-hidden");
       choiceView.classList.add("is-hidden");
+      checkpointView.classList.add("is-hidden");
       flashcardView.classList.remove("is-hidden");
     }
 
@@ -633,6 +706,7 @@
       }
       flashcardView.classList.add("is-hidden");
       exerciseView.classList.add("is-hidden");
+      checkpointView.classList.add("is-hidden");
       choiceView.classList.remove("is-hidden");
       createChoiceQuestion();
     }
@@ -658,6 +732,70 @@
       void cardEl.offsetWidth;
       cardEl.classList.add(direction > 0 ? "is-next" : "is-prev");
       renderCard();
+    }
+
+    function createCheckpoint() {
+      checkpointCards = shuffle(deck.cards.map((card, cardIndex) => ({ ...card, id: cardIndex }))).slice(0, 6);
+      const list = document.createElement("div");
+      list.className = "checkpoint-list";
+      checkpointCards.forEach((card, cardIndex) => {
+        const item = document.createElement("div");
+        item.className = "checkpoint-card";
+        item.dataset.cardId = card.id;
+        const question = document.createElement("div");
+        question.className = "checkpoint-question";
+        question.textContent = maskTermInExplanation(card.a, card.b);
+        const answer = document.createElement("input");
+        answer.type = "text";
+        answer.className = "checkpoint-answer";
+        answer.autocomplete = "off";
+        answer.setAttribute("aria-label", `Antwort zu Frage ${cardIndex + 1}`);
+        const feedback = document.createElement("div");
+        feedback.className = "checkpoint-feedback";
+        item.append(question, answer, feedback);
+        list.appendChild(item);
+      });
+      checkpointBoard.replaceChildren(list);
+      checkpointMessage.textContent = "";
+    }
+
+    function checkCheckpoint(showSolution = false) {
+      if (!checkpointCards.length) return;
+      let correct = 0;
+      [...checkpointBoard.querySelectorAll(".checkpoint-card")].forEach(item => {
+        const card = checkpointCards.find(candidate => String(candidate.id) === item.dataset.cardId);
+        const input = item.querySelector(".checkpoint-answer");
+        const feedback = item.querySelector(".checkpoint-feedback");
+        input.disabled = true;
+        item.classList.remove("is-correct", "is-wrong");
+        feedback.classList.remove("is-correct", "is-wrong");
+        if (showSolution) {
+          item.classList.add("is-correct");
+          feedback.classList.add("is-correct");
+          feedback.textContent = `Lösung: ${card.b}`;
+          return;
+        }
+        const isCorrect = input.value.trim().toLowerCase() === card.b.trim().toLowerCase();
+        if (isCorrect) correct += 1;
+        item.classList.add(isCorrect ? "is-correct" : "is-wrong");
+        feedback.classList.add(isCorrect ? "is-correct" : "is-wrong");
+        feedback.textContent = isCorrect ? "Richtig!" : `Nicht ganz. Richtig wäre: ${card.b}`;
+      });
+      checkpointMessage.textContent = showSolution
+        ? "Hier sind die Lösungen."
+        : `${correct} von ${checkpointCards.length} Punkten.`;
+    }
+
+    function showCheckpoint() {
+      if (!deck.cards.length) {
+        checkpointMessage.textContent = "Bitte zuerst ein Thema laden.";
+        return;
+      }
+      flashcardView.classList.add("is-hidden");
+      exerciseView.classList.add("is-hidden");
+      choiceView.classList.add("is-hidden");
+      checkpointView.classList.remove("is-hidden");
+      createCheckpoint();
     }
 
     async function loadSelection() {
@@ -689,16 +827,25 @@
     document.getElementById("prev").onclick = () => changeCard(-1);
     document.getElementById("exerciseMode").onclick = showExercise;
     document.getElementById("choiceMode").onclick = showChoice;
+    document.getElementById("checkpointMode").onclick = showCheckpoint;
     document.getElementById("choiceFromMatching").onclick = showChoice;
+    document.getElementById("checkpointFromMatching").onclick = showCheckpoint;
     document.getElementById("backToCards").onclick = showFlashcards;
     document.getElementById("choiceBackToCards").onclick = showFlashcards;
     document.getElementById("choiceToMatching").onclick = showExercise;
+    document.getElementById("checkpointFromChoice").onclick = showCheckpoint;
+    document.getElementById("checkpointBackToCards").onclick = showFlashcards;
+    document.getElementById("checkpointToMatching").onclick = showExercise;
+    document.getElementById("checkpointToChoice").onclick = showChoice;
     document.getElementById("checkExercise").onclick = () => checkExercise();
     document.getElementById("showSolutions").onclick = () => checkExercise(true);
     document.getElementById("newExercise").onclick = createExercise;
     document.getElementById("choicePrev").onclick = () => changeChoice(-1);
     document.getElementById("choiceNext").onclick = () => changeChoice(1);
     document.getElementById("choiceSolution").onclick = showChoiceSolution;
+    document.getElementById("checkCheckpoint").onclick = () => checkCheckpoint();
+    document.getElementById("showCheckpointSolutions").onclick = () => checkCheckpoint(true);
+    document.getElementById("newCheckpoint").onclick = createCheckpoint;
 
     async function initialize() {
       try {

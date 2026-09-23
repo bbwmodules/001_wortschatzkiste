@@ -25,7 +25,7 @@
     {
       "b": "Tags",
       "q": "Was sind Tags in HTML?",
-      "a": "Ein Tag ist eine Kennzeichnung in spitzen Klammern. Es markiert den Anfang oder das Ende eines HTML-Elements."
+      "a": "Tags haben eine Kennzeichnung in spitzen Klammern. Sie markieren den Anfang oder das Ende eines HTML-Elements."
     },
     {
       "b": "Anfangs-Tag",
@@ -40,10 +40,10 @@
     {
       "b": "Attribute",
       "q": "Was sind ein Attribute?",
-      "a": "Ein Start-Tag kann optional **Attribute** enthalten, die zusätzliche Informationen über das Element liefern."
+      "a": "Ein Start-Tag kann optional Attribute enthalten, die zusätzliche Informationen über das Element liefern."
     },
     {
-      "b": "richtig einrücken",
+      "b": "Einrücken",
       "q": "Warum sollte man HTML-Code richtig einrücken?",
       "a": "Das Einrücken macht den Code besser lesbar und verständlicher. Für den Browser spielt es keine Rolle, aber für Entwickler erhöht es die Übersichtlichkeit."
     },
