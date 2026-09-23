@@ -9,22 +9,22 @@
     },
     {
       "b": "DNS",
-      "q": "DNS – wofür?",
+      "q": "Wozu dient DNS?",
       "a": "Domain Name System löst Namen (z. B. example.com) in IP-Adressen auf."
     },
     {
       "b": "DHCP",
-      "q": "DHCP – kurz erklärt",
+      "q": "Wozu dient DHCP?",
       "a": "Dynamic Host Configuration Protocol vergibt automatisch IP-Konfigurationen an Clients."
     },
     {
       "b": "Subnetzmaske",
-      "q": "Subnetzmaske?",
+      "q": "Was ist eine Subnetzmaske?",
       "a": "Sie teilt das Netzwerk in Netz- und Hostanteil (z. B. 255.255.255.0)."
     },
     {
       "b": "Gateway",
-      "q": "Default Gateway",
+      "q": "Was ist ein Gateway?",
       "a": "Router-Adresse, an die Pakete für andere Netze geschickt werden."
     }
   ]

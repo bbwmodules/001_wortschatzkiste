@@ -3,18 +3,18 @@
   "description": "Syntax & OOP‑Grundlagen",
   "cards": [
     {
-      "b": "public",
+      "b": "public static void main(String[] args)",
       "q": "Was macht 'public static void main'?",
       "a": "Einstiegspunkt in eine Java‑Applikation."
     },
     {
       "b": "static",
       "q": "Was macht 'static'?",
-      "a": "Statische Methoden und Variablen gehören der Klasse an, nicht dem Objekt."
+      "a": "Deklariert das eine Methode oder Funktion zur Klasse und nicht zum Objekt gehört."
     },
     {
       "b": "Klasse",
-      "q": "Klasse vs. Objekt?",
+      "q": "Was ist der Unterschied zwischen Klasse und Objekt?",
       "a": "Klasse = Bauplan, Objekt = Instanz."
     },
     {
@@ -24,13 +24,13 @@
     },
     {
       "b": "Interface",
-      "q": "Interface?",
-      "a": "Ein Vertrag für Methoden-Signaturen ohne Implementierung."
+      "q": "Was ist ein Interface?",
+      "a": "Ein Vertrag für Methoden-Signaturen ohne Implementierung. Eine Klasse kann mehrere Interfaces implementieren."
     },
     {
       "b": "Package",
-      "q": "Package?",
-      "a": "Namensraum/Ordnerstruktur für Klassen."
+      "q": "Was ist ein Package?",
+      "a": "Ein Package ist ein Namensraum/Ordnerstruktur für Klassen."
     }
   ]
 }

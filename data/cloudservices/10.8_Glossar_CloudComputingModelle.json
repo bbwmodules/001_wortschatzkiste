@@ -5,7 +5,7 @@
     {
       "b": "Cloud Computing",
       "q": "Was ist Cloud Computing?",
-      "a": "Cloud Computing ist die Bereitstellung von Computing-Ressourcen (Server, Speicher, Datenbanken, Netzwerke, Software, Analyse, KI usw.) über das Internet, um Innovation, flexible Ressourcen und Skaleneffekte zu ermöglichen."
+      "a": "Cloud Computing ist die Bereitstellung von Computing-Ressourcen (Server, Speicher, Datenbanken, Netzwerke, Software, Analyse, KI usw.) über das Internet und ermöglicht Innovation, flexible Ressourcen und Skaleneffekte."
     },
     {
       "b":"Hyperscaler",
@@ -35,7 +35,7 @@
     {
       "b": "On-Premise",
       "q": "Was bedeutet On-Premise?",
-      "a": "Beim On-Premise-Betrieb wird Software vollständig in eigener Verantwortung auf eigener Hardware oder in eigenen/mieteten Rechenzentren betrieben – ohne Cloud."
+      "a": "Beim On-Premise-Betrieb wird Software vollständig in eigener Verantwortung auf eigener Hardware oder in eigenen/mieteten Rechenzentren betrieben, ohne Cloud."
     },
     {
       "b": "Public Cloud",

@@ -15,7 +15,7 @@
     {
       "b": "IaC",
       "q": "Was bedeutet Infrastructure as Code (IaC)?",
-      "a": "IaC ist die Verwaltung und Bereitstellung von Infrastruktur über maschinenlesbare Definitionsdateien – anstatt über manuelle Konfiguration von Hardware oder Tools."
+      "a": "IaC ist die Verwaltung und Bereitstellung von Infrastruktur über maschinenlesbare Definitionsdateien, anstatt über manuelle Konfiguration von Hardware oder Tools."
     },
     {
       "b": "Pay-as-you-go",
@@ -45,12 +45,12 @@
     { 
       "b": "Skalierung",
       "q": "Was bedeutet vertikale Skalierung?",
-      "a": "Vertikale Skalierung (Scale up) erhöht die Kapazität durch Hinzufügen zusätzlicher Ressourcen, z. B. mehr CPU oder RAM für einen Server."
+      "a": "Vertikale Skalierung (Scale up) erhöht die Kapazität durch Hinzufügen zusätzlicher Ressourcen, Bsp. mehr CPU oder RAM für einen Server."
     },
     { 
       "b": "Instanz",
       "q": "Was ist ein Knoten oder eine Instanz?",
-      "a": "Eine Instanz ist eine Ressource, z. B. ein Server mit RAM und Prozessoren. Mehrere Instanzen können für Skalierung genutzt werden."
+      "a": "Eine Instanz ist eine Ressource, zBsp. ein Server mit RAM und Prozessoren. Mehrere Instanzen können für Skalierung genutzt werden."
     },
     {
       "b": "Autoscaling",
