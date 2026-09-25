@@ -45,12 +45,12 @@
     {
       "b": "HTML",
       "q": "Was bedeutet HTML?",
-      "a": "HTML steht für HyperText Markup Language. Es ist die Standard-Auszeichnungssprache, mit der der Inhalt von Webseiten strukturiert wird. Browser interpretieren den Code und zeigen die Seite an."
+      "a": "(HyperText Markup Language) ist die Sprache, mit der die Inhalte einer Webseite strukturiert werden."
     },
     {
       "b": "Markup",
       "q": "Was ist Markup?",
-      "a": "Markup bedeutet Auszeichnung. HTML ist eine Markup-Sprache, bei der Inhalte mit Tags ausgezeichnet werden, damit der Browser weiss, wie sie dargestellt werden sollen."
+      "a": "Markup bedeutet Auszeichnung. HTML ist eine Markup-Sprache, bei der Inhalte mit Tags ausgezeichnet werden Bsp als Überschrift, Absatz ..."
     },
     {
       "b": "Text",

@@ -10,7 +10,7 @@
     {
       "b": "HTML",
       "q": "Was bedeutet HTML?",
-      "a": "HTML bedeutet HyperText Markup Language. Es ist die Standard-Auszeichnungssprache, mit der der Inhalt von Webseiten strukturiert wird. Browser interpretieren den Code und stellen die Seite dar."
+      "a": "HTML bedeutet HyperText Markup Language. Es ist die Standard-Auszeichnungssprache, mit der Inhalt und Struktur einer Webseiten beschrieben werden."
     },
     {
       "b": "Webserver",
@@ -65,12 +65,12 @@
     {
       "b": "CSS",
       "q": "Was ist CSS?",
-      "a": "CSS (Cascading Style Sheets) ist eine Sprache zur Formatierung und Gestaltung von Webseiten. Sie definiert, wie HTML-Elemente auf der Seite aussehen sollen."
+      "a": "Mit CSS (Cascading Style Sheets) werden Formatierung und Gestaltung einer Webseiten festgelegt. Definiert, wie HTML-Elemente auf der Seite aussehen sollen."
     },
     {
       "b": "JavaScript",
       "q": "Was ist JavaScript?",
-      "a": "JavaScript ist eine Programmiersprache, die hauptsächlich für die Entwicklung von Webanwendungen verwendet wird. Sie ermöglicht dynamische Inhalte und Interaktivität auf Webseiten."
-    }
+      "a": "JavaScript ist eine Programmiersprache für Webanwendungen. Sie ermöglicht interaktive Inhalte zu beschreiben."
+    
   ]
 }

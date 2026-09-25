@@ -5,17 +5,17 @@
     {
       "b": "HTML",
       "q": "Was heisst HTML?",
-      "a": "(HyperText Markup Language) ist die Sprache, mit der die Inhalte einer Webseite strukturiert werden."
+      "a": "HTML bedeutet HyperText Markup Language. Es ist die Standard-Auszeichnungssprache, mit der Inhalt und Struktur einer Webseiten beschrieben werden."
       },
     {
       "b": "Markup",
       "q": "Was heisst Markup?",
-      "a": "**Markup** bedeutet „Auszeichnung“: Texte werden mit speziellen Zeichen (HTML-Elemente) versehen, um ihre Bedeutung festzulegen, beispielsweise als Überschrift, Absatz oder Link."
+      "a": "Markup bedeutet Auszeichnung. HTML ist eine Markup-Sprache, bei der Inhalte mit Tags ausgezeichnet werden Bsp als Überschrift, Absatz ..."
       },
     {
       "b": "Konzept von HTML",
       "q": "Was ist das Konzept von HTML?",
-      "a": "Das Konzept von HTMLbesteht darin, die Inhalte einer Webseite mit hierarchisch verschachtelten Elementen zu strukturieren und ihre Bedeutung zu kennzeichnen"
+      "a": "Das Konzept von HTML besteht aus hierarchisch verschachtelten Elementen deren Bedetung mit Tags gekennzeichnet sind."
     },
     {
       "b": "Element",
