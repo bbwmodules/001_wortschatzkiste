@@ -1,0 +1,66 @@
+{
+  "topic": "HTML: Seitenaufbau ... nav",
+  "description": "HTML: Seitenaufbau ... nav",
+  "cards": [
+    {
+      "b": "<header>",
+      "q": "Wofür steht das <header>-Tag?",
+      "a": "<header> kennzeichnet den Kopf einer Seite oder eines Abschnitts."
+    },
+    {
+      "b": "<main>",
+      "q": "Wofür steht das <main>-Tag?",
+      "a": "<main> kennzeichnet den Hauptinhalt einer Seite."
+    },
+    {
+      "b": "<footer>",
+      "q": "Wofür steht das <footer>-Tag?",
+      "a": "<footer> kennzeichnet den Fussteil einer Seite oder eines Abschnitts."
+    },
+    {
+      "b": "<nav>",
+      "q": "Wofür steht das <nav>-Tag?",
+      "a": "<nav> kennzeichnet einen Bereich mit Navigationslinks."
+    },
+    {
+      "b": "aria-current",
+      "q": "Wofür steht das aria-current-Attribut?",
+      "a": "Das Attribut `aria-current` markiert den aktuellen Menüpunkt. Screenreader geben an: 'aktuell ausgewählt'."
+    },
+    {
+      "b": "<div>",
+      "q": "Wofür steht das <div>-Tag?",
+      "a": "<div> ist ein generischer Container-Tag, der zur Strukturierung des Inhalts verwendet wird."
+    },
+    {
+      "b": "<section>",
+      "q": "Wofür steht das <section>-Tag?",
+      "a": "<section> kennzeichnet einen Abschnitt einer Seite."
+    },
+    {
+      "b": "<article>",
+      "q": "Wofür steht das <article>-Tag?",
+      "a": "<article> kennzeichnet einen eigenständigen Inhalt, wie z.B. einen Blog-Post oder eine Nachricht."
+    },
+    {
+      "b": "<aside>",
+      "q": "Wofür steht das <aside>-Tag?",
+      "a": "<aside> kennzeichnet einen Bereich mit sekundärem Inhalt, wie z.B. eine Sidebar oder ein Inhaltsverzeichnis."
+    },
+    {
+      "b": "<details>",
+      "q": "Wofür steht das <details>-Tag?",
+      "a": "<details> kennzeichnet einen Bereich mit zusätzlichen Informationen, die auf Anfrage sichtbar werden."
+    },
+    {
+      "b": "<summary>",
+      "q": "Wofür steht das <summary>-Tag?",
+      "a": "<summary> kennzeichnet die Überschrift eines <details>-Elements."
+    },
+    {
+      "b": "<address>",
+      "q": "Wofür steht das <address>-Tag?",
+      "a": "<address> kennzeichnet die Kontaktinformationen einer Person oder Organisation."
+    }
+  ]
+}

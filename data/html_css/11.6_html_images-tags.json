@@ -1,33 +1,13 @@
 {
-  "topic": "HTML: Navigation und Bilder",
-  "description": "HTML Navigation und Bilder",
+  "topic": "HTML: Bilder",
+  "description": "HTML Bilder",
   "cards": [
     {
       "b": "Pfad",
       "q": "Was bedeutet 'Pfad auf Bilder'?",
       "a": "Der Pfad gibt an, wo die Bilddatei liegt. Beispiel: `./img/desk.svg` bedeutet: im aktuellen Verzeichnis liegt ein Unterordner `img` mit der Datei `desk.svg`."
     },
-    {
-      "b": "<a>",
-      "q": "Wofür steht das <a>-Tag?",
-      "a": "<a> (Anchor) wird für Links benutzt. Beispiel: <a href=\"https://www.bbw.ch\">BBW</a> erstellt einen klickbaren Verweis."
-    },
-    {
-      "b": "href",
-      "q": "Wofür dient das href-Attribut?",
-      "a": "Das Attribut `href` (Hypertext Reference) gibt die Zieladresse eines Links an (URL oder Pfad)."
-    },
-    {
-      "b": "<nav>",
-      "q": "Wofür dient das <nav>-Tag?",
-      "a": "<nav> kennzeichnet einen Bereich mit Navigationslinks. Es ist ein semantisches HTML5-Element und verbessert Barrierefreiheit sowie SEO."
-    },
-    {
-      "b": "aria-current",
-      "q": "Was bedeutet aria-current?",
-      "a": "Das Attribut `aria-current=\"page\"` markiert den aktuellen Menüpunkt. Screenreader geben an: 'aktuell ausgewählt'."
-    },
-    {
+   {
       "b": "<img>",
       "q": "Wofür dient das <img>-Tag?",
       "a": "<img> bindet ein Bild in eine Webseite ein. Beispiel: <img src=\"bild.png\" alt=\"Beschreibung\" width=\"200\" title=\"ein Bild\">."
@@ -43,6 +23,11 @@
       "a": "Das Attribut `alt` gibt einen Alternativtext an, falls das Bild nicht geladen werden kann oder für Screenreader."
     },
     {
+      "b": "title",
+      "q": "Wofür dient das title-Attribut?",
+      "a": "Das Attribut `title` zeigt einen zusätzlichen Hinweis (Tooltip), wenn man mit der Maus über das Bild fährt."
+    },
+    {
       "b": "width",
       "q": "Wofür dient das width-Attribut?",
       "a": "Mit `width` (und optional `height`) kann die Grösse des Bildes in Pixeln angegeben werden."
@@ -53,6 +38,11 @@
       "a": "Das `title`-Attribut zeigt einen zusätzlichen Hinweis (Tooltip), wenn man mit der Maus über das Bild fährt."
     },
     {
+      "b": "Bildformate",
+      "q": "Welche Bildformate werden unterstützt?",
+      "a": "HTML unterstützt verschiedene Bildformate, darunter JPEG, PNG, GIF, SVG und WebP."
+    },
+    {
       "b": "<figure>",
       "q": "Wofür dient das <figure>-Tag?",
       "a": "<figure> ist ein Container für ein Bild oder eine Grafik, oft zusammen mit einer Bildunterschrift."
@@ -61,6 +51,16 @@
       "b": "<figcaption>",
       "q": "Wofür dient das <figcaption>-Tag?",
       "a": "<figcaption> fügt eine Bildunterschrift zu einem Bild innerhalb von <figure> hinzu. Beispiel: <figcaption>Abbildung 1: Meine Katze</figcaption>."
+    },
+    {
+      "b": "relativer Pfad",
+      "q": "Was bedeutet relativer Pfad in HTML?",
+      "a": "Ein relativer Pfad wird ausgehend vomaktuellen Verzeichnis angegeben. Beispiel: HTML-Seite in `./pages/index.html`, Pfad auf Bild `../img/desk.svg`."
+    },
+    {
+      "b": "externe URLs",
+      "q": "Was bedeutet externe URLs in HTML?",
+      "a": "Externe URLs sind vollständige Webadressen, die auf Ressourcen ausserhalb der aktuellen Website verweisen. Beispiel: <img src=\"https://example.com/image.png\">."
     },
     {
       "b": "'./'",

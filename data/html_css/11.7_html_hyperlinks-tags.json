@@ -1,0 +1,51 @@
+{
+  "topic": "HTML: Hyperlinks",
+  "description": "HTML Hyperlinks",
+  "cards": [
+    {
+      "b": "<a>",
+      "q": "Wofür steht das <a>-Tag?",
+      "a": "<a> (Anchor) wird für Links benutzt. Beispiel: <a href=\"https://www.bbw.ch\">BBW</a> erstellt einen klickbaren Verweis."
+    },
+    {
+      "b": "href",
+      "q": "Wofür dient das href-Attribut?",
+      "a": "Das Attribut `href` (Hypertext Reference) gibt die Zieladresse eines Links an (URL oder Pfad)."
+    },
+    {
+      "b": "Linktext",
+      "q": "Was bedeutet der Linktext in HTML?",
+      "a": "Der Linktext ist der sichtbare, anklickbare Text in einem Hyperlink. Beispiel: <a href=\"https://www.bbw.ch\">BBW</a> 'BBW' ist der Linktext."
+    },
+    {
+      "b": "tel:",
+      "q": "Für was wird 'tel:' verwendet?",
+      "a": "Das Präfix 'tel:' wird verwendet, um eine Telefonnummer als Link zu kennzeichnen. Beispiel: <a href=\"tel:+41123456789\">+41 12 345 67 89</a>."
+    },
+    {
+      "b": "mailto:",
+      "q": "Für was wird 'mailto:' verwendet?",
+      "a": "Das Präfix 'mailto:' wird verwendet, um eine E-Mail-Adresse als Link zu kennzeichnen. Beispiel: <a href=\"mailto:info@bbw.ch\">info@bbw.ch</a>."
+    },
+    {
+      "b": "download:",
+      "q": "Für was wird 'download:' verwendet?",
+      "a": "Das Präfix 'download:' wird verwendet, um eine Datei zum Download anzubieten. Beispiel: <a href=\"download:Datei.pdf\" download>PDF herunterladen</a>."
+    },
+    {
+      "b": "sprung:",
+      "q": "Für was ein Sprung verwendet?",
+      "a": "Das Präfix 'sprung:' wird verwendet, um zu einer bestimmten Stelle innerhalb einer Seite zu springen. Beispiel: <a href=\"#abschnitt1\">Zum Abschnitt 1</a>."
+    },
+    {
+      "b": "'./'",
+      "q": "Was bedeutet der Pfad './' in HTML?",
+      "a": "Das Präfix './' bedeutet: 'im aktuellen Verzeichnis'. Beispiel: <img src=\"./img/desk.svg\"> sucht im Ordner 'img', der im gleichen Verzeichnis liegt wie die HTML-Seite."
+    },
+    {
+      "b": "'../'",
+      "q": "Was bedeutet der Pfad '../' in HTML?",
+      "a": "Das Präfix '../' bedeutet: 'ein Verzeichnis höher'. Beispiel: <img src=\"../bilder/logo.png\"> sucht im Ordner 'bilder', der eine Ebene über der aktuellen HTML-Seite liegt."
+    }
+  ]
+}
