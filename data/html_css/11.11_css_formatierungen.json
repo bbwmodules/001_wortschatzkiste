@@ -98,9 +98,19 @@
       "a": "border-color: Legt die Farbe des Rahmens fest, Bsp: red, blue oder #00FF00."
     },
     {
-      "b": "body h1, body > h1",
-      "q": "Was ist der Unterschied zwischen body h1 und body > h1?",
-      "a": "body h1: Selektiert alle h1-Elemente, die Nachfahren von body sind. body > h1: Selektiert nur die h1-Elemente, die direkte Kinder von body sind."
+      "b": "body h1",
+      "q": "Erkläre was body h1 bewirkt.",
+      "a": "body h1: Selektiert alle h1-Elemente, die Nachfahren von body sind."
+    },
+    {
+      "b": "body > h1",
+      "q": "Erkläre was body > h1 bewirkt.",
+      "a": "body > h1: Selektiert nur die h1-Elemente, die direkte Kinder von body sind."
+    },
+    {
+      "b": "body, h1",
+      "q": "Erkläre was body, h1 bewirkt.",
+      "a": "body, h1: Selektiert body und alle h1-Elemente und abhängig von einander."
     }
   ]
 }
