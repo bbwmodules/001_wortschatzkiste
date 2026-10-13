@@ -1,0 +1,81 @@
+{
+  "topic": "CSS: Konzepte",
+  "description": "CSS, Konzepte, Einbindung, Eigenschaften, Selektoren",
+  "cards": [
+    {
+      "b": "CSS",
+      "q": "Grundprinzip CSS",
+      "a": "CSS bestimmt wie HTML-Inhalte aussehen und angeordnet werden."
+    },
+    {
+      "b": "CSS",
+      "q": "Bedeutung von CSS",
+      "a": "CSS heisst Cascading Style Sheets."
+    },
+    {
+      "b": "Trennung",
+      "q": "Wieso wird zwischen HTML und CSS getrennt?",
+      "a": "HTML beschreibt die Struktur, CSS gestaltet sie."
+    },
+    {
+      "b": "Einbinden",
+      "q": "Arten wie CSS eingebunden werden kann",
+      "a": "CSS kann inline, intern oder extern eingebunden werden."
+    },
+    {
+      "b": "inline",
+      "q": "Wo bindet man CSS inline ein?",
+      "a": "CSS inline macht man direkt beim Element, z. B. <p style=\"color: red;\">Text</p>."
+    },
+    {
+      "b": "intern",
+      "q": "Wo bindet man CSS intern ein?",
+      "a": "CSS intern macht man im <head> des HTML-Dokuments, z. B. <style> p { color: red; } </style>."
+    },
+    {
+      "b": "extern",
+      "q": "Wo bindet man CSS extern ein?",
+      "a": "CSS extern macht man in einer eigenen Datei, per <link rel=\"stylesheet\" href=\"styles.css\"> eingebunden. Standard für grössere Websites."
+    },
+    {
+      "b": "Gestaltung",
+      "q": "Wie definiert man eine Gestaltung mit CSS?",
+      "a": "Mit Element, Eigenschaft und Wert. zBsp. p { color: red; }."
+    },
+    {
+      "b": "Selektoren",
+      "q": "Was sind Selektoren?",
+      "a": "Selektoren bestimmen, welche Elemente gestylt werden. Beispiele: Element-Selektor (p), Klassen-Selektor (.info), ID-Selektor (#haupttitel)."
+    },
+    {
+      "b": "Element-Selektor",
+      "q": "Wie nutzt man einen Element-Selektor?",
+      "a": "Einen Element-Selektor nutzt man, um alle Elemente eines Typs zu stylen. Beispiel: p { background-color: lightyellow; }"
+    },
+    {
+      "b": "Klassen-Selektor",
+      "q": "Wie nutzt man einen Klassen-Selektor?",
+      "a": "Einen Klassen-Selektor nutzt man, um alle Elemente mit einer bestimmten Klasse zu stylen. Beispiel: .info { color: blue; }"
+    },
+    {
+      "b": "ID-Selektor",
+      "q": "Wie nutzt man einen ID-Selektor?",
+      "a": "Einen ID-Selektor nutzt man, um ein spezifisches Element mit einer bestimmten ID zu stylen. Beispiel: #haupttitel { color: green; }"
+    },
+    {
+      "b": "Attribut-Selektor",
+      "q": "Wie nutzt man einen Attribut-Selektor?",
+      "a": "Einen Attribut-Selektor nutzt man, um Elemente mit einem bestimmten Attribut zu stylen. Beispiel: [text] { color: red; }"
+    },
+    {
+      "b": "Verschachtelter-Selektor",
+      "q": "Wie nutzt man einen Verschachtelter-Selektor?",
+      "a": "Einen Verschachtelter-Selektor nutzt man, um Elemente zu stylen, die innerhalb anderer Elemente liegen. Beispiel: p span { color: red; }"
+    },
+    {
+      "b": "Vererbung",
+      "q": "Wie funktioniert Vererbung in CSS?",
+      "a": "Vererbung in CSS bedeutet, dass Kinder-Elemente die Eigenschaften ihrer Eltern-Elemente übernehmen. Das <span> Element innerhalb eines <p> Elements erhält die Farbe des <p> Elements."
+    }
+  ]
+}

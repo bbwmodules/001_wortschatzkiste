@@ -1,0 +1,106 @@
+{
+  "topic": "CSS: Formatierungen mit CSS",
+  "description": "CSS: Grössen, Farben, Schrift, Background, Rahmen",
+  "cards": [
+    {
+      "b": "Grössenangaben",
+      "q": "Wie werden Grössenangaben in CSS definiert?",
+      "a": "Grössenangaben in CSS werden in verschiedenen Einheiten definiert: px, %, em, rem."
+    },
+    {
+      "b": "px",
+      "q": "Was bedeutet die Einheit px?",
+      "a": "px steht für Pixel und ist eine absolute Einheit, die die Gröse eines Elements in Bildschirm-Pixeln angibt."
+    },
+    {
+      "b": "%",
+      "q": "Was bedeutet die Einheit %?",
+      "a": "% steht für Grössenangabe in Bezug auf das Elternelement."
+    },
+    {
+      "b": "em",
+      "q": "Was bedeutet die Einheit em?",
+      "a": "em steht für ein relatives Mass, das sich auf die Schriftgrösse des Elternelements bezieht."
+    },
+    {
+      "b": "rem",
+      "q": "Was bedeutet die Einheit rem?",
+      "a": "rem steht für root em und ist ein relatives Mass, das sich auf die Schriftgrösse des Root-Elements bezieht."
+    },
+    {
+      "b": "cm",
+      "q": "Was bedeutet die Einheit cm?",
+      "a": "cm steht für Zentimeter und ist eine absolute Einheit, die die Gröse eines Elements in Zentimetern angibt."
+    },
+    {
+      "b": "Farben",
+      "q": "Wie werden Farben bei CSS definiert?",
+      "a": "Farben werden als Hexadezimalwerte (z. B. #FF0000) oder Farbnamen (z. B. red) in CSS definiert."
+    },
+    {
+      "b": "RGB",
+      "q": "Was bedeutet das RGB-Farbsystem?",
+      "a": "RGB steht für Rot, Grün, Blau. Farben werden durch die Mischung dieser drei Grundfarben erzeugt."
+    },
+    {
+      "b": "RGBA",
+      "q": "Was bedeutet das RGBA-Farbsystem?",
+      "a": "RGBA steht für Rot, Grün, Blau, Alpha. Farben werden durch die Mischung dieser drei Grundfarben sowie einer Transparenz (Alpha) erzeugt."
+    },
+    {
+      "b": "font-size",
+      "q": "Wofür steht font-size?",
+      "a": "font-size: Legt die Schriftgrösse fest, Bsp. 16px, 2em, 120%."
+    },
+    {
+      "b": "font-family",
+      "q": "Wofür steht font-family?",
+      "a": "font-family: Legt die Schriftart fest, Bsp. Arial, Times New Roman, sans-serif."
+    },
+    {
+      "b": "font-style",
+      "q": "Wofür steht font-style?",
+      "a": "font-style: Legt den Schriftstil fest, Bps. normal, italic ..."
+    },
+    {
+      "b": "font-weight",
+      "q": "Wofür steht font-weight?",
+      "a": "font-weight: Legt die Schriftstärke fest: Bsp: normal, bold"
+    },
+    {
+      "b": "color",
+      "q": "Wofür steht color?",
+      "a": "color: Legt die Textfarbe fest, Bsp. red, blue oder #00FF00."
+    },
+    {
+      "b": "text-align",
+      "q": "Wofür steht text-align?",
+      "a": "text-align: Legt die Ausrichtung des Textes fest, Bps. left, right, center, justify."
+    },
+    {
+      "b": "background-color",
+      "q": "Wofür steht background-color?",
+      "a": "background-color: Legt die Hintergrundfarbe eines Elements fest, Bsp. lightyellow oder #f0f0f0."
+    },
+    {
+      "b": "border-width",
+      "q": "Wofür steht border-width?",
+      "a": "border-width: Legt die Breite des Rahmens fest, Bsp. 2px, 5mm, 0.5em."
+    },
+    {
+      "b": "border-style",
+      "q": "Wofür steht border-style?",
+      "a": "border-style: Legt den Stil des Rahmens fest, Bsp: solid, dashed, dotted."
+    },
+    {
+      "b": "border-color",
+      "q": "Wofür steht border-color?",
+      "a": "border-color: Legt die Farbe des Rahmens fest, Bsp: red, blue oder #00FF00."
+    },
+    {
+      "b": "body h1, body > h1",
+      "q": "Was ist der Unterschied zwischen body h1 und body > h1?",
+      "a": "body h1: Selektiert alle h1-Elemente, die Nachfahren von body sind. body > h1: Selektiert nur die h1-Elemente, die direkte Kinder von body sind."
+    }
+  ]
+}
