@@ -1,0 +1,61 @@
+{
+  "topic": "Responsive Webdesign",
+  "description": "Responsive Webdesign, Dev-Tools, Mobile First, Box-Modell, Flexible Breiten, viewport, Grid oder Flexbox, Media Queries",
+  "cards": [
+    {
+      "b": "Responsive Webdesign",
+      "q": "Was ist das Responsive Webdesign?",
+      "a": "Responsive Webdesign ist ein Ansatz, bei dem Websites und Anwendungen sich automatisch an die Grösse des Bildschirms anpassen."
+    },
+    {
+      "b": "Dev-Tools",
+      "q": "Was ist das Dev-Tools im Browser?",
+      "a": "Dev-Tools sind Werkzeuge, die Entwicklern helfen, Webanwendungen zu entwickeln und zu debuggen.zBsp Simulation von verschiedenen Bildschirmgrössen."
+    },
+    {
+      "b": "Mobile First",
+      "q": "Was ist das Mobile First Konzept?",
+      "a": "Mobile First ist ein Designansatz, bei dem zuerst für mobile Geräte entwickelt wird, bevor auf Desktop- und andere Geräte ausgeweitet wird."
+    },
+    {
+      "b": "Box-Modell",
+      "q": "Was ist das CSS-Box Modell?",
+      "a": "Das Box-Modell behandelt jedes HTML-Element als Box mit vier Bereichen: content (Inhalt), padding (Innenabstand), border (Rahmen) und margin (Aussenabstand)."
+    },
+    {
+      "b": "Flexible Breiten",
+      "q": "Wie funktioniert das Konzept der Flexible Breiten?",
+      "a": "Mit Flexible Breiten passen sich die Breiten von Elementen dynamisch an die verfügbare Breite an."
+    },
+    {
+      "b": "viewport",
+      "q": "Was bedeutet viewport?",
+      "a": "viewport ist der sichtbare Bereich des Browser-Fensters."
+    },
+    {
+      "b": "viewport verwenden",
+      "q": "Wie wird der viewport verwendet?",
+      "a": "Mit viewport wird die Grösse des sichtbaren Bereichs des Browser-Fensters definiert."
+    },
+    {
+      "b": "Grid oder Flexbox",
+      "q": "Wie funktioniert Responsive Webdesign mit Grid oder Flexbox?",
+      "a": "Mit Grid und Flexbox können Elemente für responsive Layouts definiert angeordnet werden."
+    },
+    {
+      "b": "Media Queries",
+      "q": "Was sind Media Queries?",
+      "a": "Media Queries sind ein CSS-Feature, das es ermöglicht, Styles basierend auf der Eigenschaften des Geräts (z. B. Breite, Höhe, Auflösung) anzuwenden."
+    },
+    {
+      "b": "media print",
+      "q": "Was bedeutet media print?",
+      "a": "media print ist eine CSS-Medienart, die für die Formatierung von Druckdokumenten verwendet wird."
+    },
+    {
+      "b": "media print anwenden",
+      "q": "Wie wird media print angewendet?",
+      "a": "Mit media print wird zBsp definiert, dass die Navigation nicht ausgedruckt wird."
+    } 
+  ] 
+}
