@@ -1,0 +1,61 @@
+{
+  "topic": "felxbox, frameworks, githubpages",
+  "description": "Vertiefung felxbox layout, frameworks und githubpages",
+  "cards": [
+    {
+      "b": "Flexible Box Layout",
+      "q": "Was ist das Flexible Box Layout?",
+      "a": "Das Flexible Box Layout ist ein CSS-Modul, das es ermöglicht, komplexe Layouts in HTML und CSS zu erstellen."
+    },
+    {
+      "b": "Vorteile von Flexbox",
+      "q": "Was sind die Vorteile von Flexbox?",
+      "a": "Vorteile von Flexbox: Zentrieren..., Grössenanpassungen..., Reichen- und Spalten..., Responsive"
+    },
+    {
+      "b": "Konzept Flexbox",
+      "q": "Was ist das Flexbox Konzept?",
+      "a": "Flexbox besteht aus einem Container (flexible Box) und seinen Kindern (flexible Items), die beide über Eigenschaften konfiguriert werden."
+    },
+    {
+      "b": "flex-direction",
+      "q": "Was ist das flex-direction Attribut?",
+      "a": "Das flex-direction Attribut bestimmt die Richtung der Flexbox, in der die Kinder angeordnet werden."
+    },
+    {
+      "b": "flex-wrap",
+      "q": "Was ist das flex-wrap Attribut?",
+      "a": "Das flex-wrap Attribut bestimmt, ob die Flexbox-Kinder in eine Zeile oder mehrere Zeilen umgebrochen werden."
+    },
+    {
+      "b": "order",
+      "q": "Was ist das order Attribut?",
+      "a": "Das order Attribut bestimmt die Reihenfolge der Flexbox-Kinder in der Flexbox."
+    },
+    {
+      "b": "flex-grow",
+      "q": "Was ist flex-grow?",
+      "a": "flex-grow bestimmt, wie sich die Breite eines Flexbox-Kindes im Verhältnis zu den anderen Kindern verhält."
+    },
+    {
+      "b": "CSS-Frameworks",
+      "q": "Was sind CSS-Frameworks?",
+      "a": "CSS-Frameworks sind vorbereitete CSS-Dateien, die Entwicklern helfen, schnell und effizient Webseiten zu erstellen."
+    },
+    {
+      "b": "Beispiele für CSS-Frameworks",
+      "q": "Welche Beispiele für CSS-Frameworks gibt es?",
+      "a": "Beispiele für CSS-Frameworks sind Bootstrap, MUI, mvp.css, Pico.css."
+    },
+    {
+      "b": "Grid oder Flexbox",
+      "q": "Wie funktioniert Responsive Webdesign mit Grid oder Flexbox?",
+      "a": "Mit Grid und Flexbox können Elemente für responsive Layouts definiert angeordnet werden."
+    },
+    {
+      "b": "Publizieren auf github",
+      "q": "Wie kann man eine Website auf GitHub publizieren?",
+      "a": "Remote und lokales Repository erstellen; lokale Dateien add, commit, push; Pages konfigurieren."
+    }
+  ] 
+}
