@@ -1,0 +1,61 @@
+{
+  "topic": "Java Assoziationen",
+  "description": "Assoziation, Aggregation, Komposition",
+  "cards": [
+    {
+      "b": "Assoziation",
+      "q": "Was ist eine Assoziation?",
+      "a": "Eine Assoziation ist eine Beziehung zwischen zwei Klassen, bei der eine Klasse auf eine andere Klasse verweist."
+    },
+    {
+      "b": "Einfache Assoziation",
+      "q": "Was ist eine einfache Assoziation?",
+      "a": "Eine einfache Assoziation ist eine Beziehung zwischen zwei Klassen, ohne Angabe welche Klasse auf welche verweisst."
+    },
+    {
+      "b": "Unidirektionale Assoziation",
+      "q": "Was ist eine Unidirektionale Assoziation?",
+      "a": "Eine Unidirektionale Assoziation ist eine Beziehung zwischen zwei Klassen, bei vorgegeben ist welche Klasse auf die andere Klasse verweisst."
+    },
+    {
+      "b": "Bidirektionale Assoziation",
+      "q": "Was ist eine Bidirektionale Assoziation?",
+      "a": "Eine Bidirektionale Assoziation ist eine Beziehung zwischen zwei Klassen, bei der beide Klassen auf die andere Klasse verweisen."
+    },
+    {
+      "b": "Navigation",
+      "q": "Was ist die Navigation in Bezug auf Assoziationen?",
+      "a": "Die Navigation in Bezug auf Assoziationen beschreibt den Weg, wie Objekte einer Klasse auf Objekte einer anderen Klasse zugreifen können."
+    },
+    {
+      "b": "Aggregation",
+      "q": "Was ist eine Aggregation?",
+      "a": "Eine Aggregation ist eine spezielle Form einer Assoziation, bei der eine Klasse die Objekte eine andere Klasse kennt, benützt aber nicht besitzt."
+    },
+    {
+      "b": "Komposition",
+      "q": "Was ist eine Komposition?",
+      "a": "Eine Komposition ist eine spezielle Form einer Assoziation, bei der eine Klasse die Objekte einer anderen Klasse kennt und besitzt."
+    },
+    {
+      "b": "Multiplizität",
+      "q": "Was ist die Multiplizität in Bezug auf Assoziationen?",
+      "a": "Die Multiplizität in Bezug auf Assoziationen beschreibt, mit wievielen Objekten der anderen Klasse eine Beziehung bestehen kann."
+    },
+    {
+      "b": "Kardinalität",
+      "q": "Was ist die Kardinalität in Bezug auf Assoziationen?",
+      "a": "Die Kardinalität in Bezug auf Assoziationen beschreibt, mit wievielen Objekten der anderen Klasse eine Beziehung im Moment besteht."
+    },
+    {
+      "b": "Abhänigkeitsbeziehung",
+      "q": "Was ist die Abhängigkeitsbeziehung in Bezug auf Assoziationen?",
+      "a": "Die Abhängigkeitsbeziehung ist eine schwache Form der Beziehung. ZBsp use."
+    },
+    {
+      "b": "use",
+      "q": "Was bedeutet 'use' in Bezug auf Assoziationen?",
+      "a": "Mit use wird eine Abhängigkeitsbeziehung zwischen zwei Klassen ausgedrückt. Klasse A nützt Klasse B."
+    }
+  ]
+}

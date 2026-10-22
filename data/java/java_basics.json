@@ -1,11 +1,11 @@
 {
   "topic": "Java Basics",
-  "description": "Syntax & OOP‑Grundlagen",
+  "description": "Syntax & OOP-Grundlagen",
   "cards": [
     {
       "b": "public static void main(String[] args)",
-      "q": "Was macht 'public static void main'?",
-      "a": "Einstiegspunkt in eine Java‑Applikation."
+      "q": "Wofür dient'public static void main(String[] args)'?",
+      "a": "Diese Methode ist der Einstiegspunkt in eine Java‑Applikation."
     },
     {
       "b": "static",
@@ -20,12 +20,12 @@
     {
       "b": "Vererbung",
       "q": "Was ist Vererbung?",
-      "a": "Eine Klasse erbt Eigenschaften/Methoden einer anderen Klasse (extends)."
+      "a": "Eine Kind-Klasse übernimmt die Eigenschaften/Methoden von ihrer Elternklasse."
     },
     {
       "b": "Interface",
-      "q": "Was ist ein Interface?",
-      "a": "Ein Vertrag für Methoden-Signaturen ohne Implementierung. Eine Klasse kann mehrere Interfaces implementieren."
+      "q": "Was definiert ein Interface?",
+      "a": "Definiert eine Sammlung von Methoden-Signaturen ohne Implementierung. Eine Klasse kann ein Interface d.h. dessen Methoden implementieren."
     },
     {
       "b": "Package",
