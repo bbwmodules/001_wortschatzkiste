@@ -5,7 +5,7 @@
     {
       "b": "Assoziation",
       "q": "Was ist eine Assoziation?",
-      "a": "Eine Assoziation ist eine Beziehung zwischen zwei Klassen, bei der eine Klasse auf eine andere Klasse verweist."
+      "a": "Eine Assoziation ist eine Beziehung zwischen zwei Klassen, bei der eine Klasse via Referenzauf eine andere Klasse verweist."
     },
     {
       "b": "Einfache Assoziation",
@@ -25,7 +25,7 @@
     {
       "b": "Navigation",
       "q": "Was ist die Navigation in Bezug auf Assoziationen?",
-      "a": "Die Navigation in Bezug auf Assoziationen beschreibt den Weg, wie Objekte einer Klasse auf Objekte einer anderen Klasse zugreifen können."
+      "a": "Die Navigation in Bezug auf Assoziationen beschreibt die Richtung, welche Klasse auf welche Klasse zugreifen kann."
     },
     {
       "b": "Aggregation",
@@ -43,12 +43,17 @@
       "a": "Die Multiplizität in Bezug auf Assoziationen beschreibt, mit wievielen Objekten der anderen Klasse eine Beziehung bestehen kann."
     },
     {
+      "b": "Intervall",
+      "q": "Was ist das Intervall in Bezug auf Multiplizität?",
+      "a": "Das Intervall in Bezug auf Multiplizität beschreibt den Bereich, in dem die Multiplizität liegt (Min-Max)."
+    },
+    {
       "b": "Kardinalität",
       "q": "Was ist die Kardinalität in Bezug auf Assoziationen?",
       "a": "Die Kardinalität in Bezug auf Assoziationen beschreibt, mit wievielen Objekten der anderen Klasse eine Beziehung im Moment besteht."
     },
     {
-      "b": "Abhänigkeitsbeziehung",
+      "b": "Abhängigkeitsbeziehung",
       "q": "Was ist die Abhängigkeitsbeziehung in Bezug auf Assoziationen?",
       "a": "Die Abhängigkeitsbeziehung ist eine schwache Form der Beziehung. ZBsp use."
     },
